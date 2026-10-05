@@ -1,0 +1,19 @@
+source_id,원문 URL,발행일,사건일,발행 주체,근거 종류,지원하는 주장,핵심 한계,검증 상태
+S01,https://www.nexon.co.jp/en/news/detail/?id=20260202-034c3abd,2026-02-02,2026-01-25,NEXON,공식 IR,"오류 발견·미고지 수정·환불 방침","당시 재무 영향 검토 중",검증 완료
+S02,https://pdf.irpocket.com/C3659/doF3/BPCC/GXD2.pdf,2026-02-12,2026-02-12,NEXON,공식 실적 Q&A,"4분기 매출 영향 90억 엔·1분기 추가 50억 엔 전망","최종 환불액이 아니며 회사 DAU 기준 미공개",검증 완료
+S03,https://forum.nexon.com/maplestoryidle/board_view?board=6653&thread=3360525,2026-01-28,2026-01-28,메이플 키우기 공식 포럼,공식 공지,"전액 환불 발표·환불 계정 이용 제한","신청자 수·지급액·후속 행동 미공개",검증 완료
+S04,https://forum.nexon.com/maplestoryidle/board_view?board=6653&thread=3368869,2026-02-05,2026-02-05,메이플 키우기 공식 포럼,공식 공지,"환불 대상·신청 기간·계정 제한 안내","실제 신청·승인 규모 미공개",검증 완료
+S05,https://www.nexon.co.jp/en/ir/uploads/ad3f8641565c3a3c2f7012d6b3e2de6a26ee2f73.pdf,2026-02-24,2025-12-31,NEXON,공식 연결재무제표,"환불부채 추정 129억3000만 엔","과거 유사 사례 환불률 기반 추정이며 최종 지급액 아님",검증 완료
+S06,https://v.daum.net/v/20260219155946719,2026-02-19,2026-01-16~2026-02-16,이데일리,모바일인덱스 재인용,"AOS+iOS DAU 추정 231784명→153123명","원자료·보정식 미확보·사건 인과 미입증",부분 검증
+S07,https://www.g-enews.com/article/ICT/2026/04/202604060848213571c5fa75ef86_1,2026-04-06,2026-01~2026-03,글로벌이코노믹,모바일인덱스 재인용,"국내 3개 앱마켓 매출 추정 439억→391억→452억 원","회사 인식 매출과 다르며 원문 산식 미확보",부분 검증
+S08,https://www.nexon.co.jp/en/ir/uploads/CMB%202026%20Presentation%20Slides%20with%20Speech%20Script.pdf,2026-03-31,2026-03-31,NEXON,공식 CMB,"운영 통제 실패·CRO·이중 보고·이사회 감독","조치 효과는 아직 검증되지 않음",검증 완료
+S09,local://refunded-purchases,2026-09-29,2025-11~2026-02,지원자,개인 결제 화면,"기존 계정 결제·환불 표시","화면 밖 거래와 동기는 증명하지 않음",개인 증빙
+S10,local://restart-purchases,2026-09-29,2026-02-06~2026-03-07,지원자,개인 결제 화면·자기 보고,"새 계정 78000원 재결제·이틀 뒤 중단 진술","단일 사례이며 중단일·동기는 접속 로그 미확보",개인 증빙·자기 보고
+S11,https://forum.nexon.com/maplestoryidle-kr/board_view?board=6633&stickyBoard=1&thread=3443917,2026-05-14,2026-05-14,메이플 키우기 공식 포럼,공식 공지,"NEXON NOW 설정·실측 확률 공개","이용률·신뢰 변화 효과 미공개",검증 완료
+S12,https://forum.nexon.com/maplestoryidle-kr/board_view?board=6633&stickyBoard=1&thread=3493858,2026-07-06,2026-07-06,메이플 키우기 공식 포럼,공식 개발자 노트,"핵심 문제 정의·메키에 바란다 의견 수렴","당시 성과 미확인",검증 완료
+S13,https://forum.nexon.com/maplestoryidle-kr/board_view?bannerBoard=1&thread=3517922,2026-08-06,2026-08-06,메이플 키우기 공식 포럼,공식 개발자 노트,"의견 답변·전투 정보·진행 상태 공개","표본·선정 기준·행동 효과 미공개",검증 완료
+S14,https://forum.nexon.com/maplestoryidle-kr/board_view?board=6698&thread=3521991,2026-08-13,2026-08-13,메이플 키우기 공식 포럼,공식 패치노트,"예고한 성장·편의 개선 일부 구현","이용률·잔존 효과 미공개",검증 완료
+S15,https://forum.nexon.com/maplestoryidle-kr/board_view?board=6633&thread=3545253,2026-09-15,2026-09-22,메이플 키우기 공식 포럼,공식 업데이트 안내,"의견 반영형 선택 구매·가격 조정","구매·민원 효과 미공개",검증 완료
+S16,https://forum.nexon.com/maplestoryidle-kr/board_view?board=6633&stickyBoard=1&thread=3545163,2026-09-15,2026-09-22,메이플 키우기 공식 포럼,공식 운영 공지,"일부 서버 통합","인구·동시접속 자료가 없어 감소 증거로 해석 불가",검증 완료·해석 제한
+S17,https://maplestory.nexon.com/News/Notice/All/136635?page=158,2022-01-27,2022-01-27,메이플스토리 공식 홈페이지,공식 운영 공지,"약속 통합·진행 현황 관리 방식","공개 형식 비교에만 사용·효과 확인 불가",검증 완료·비교 사례
+S18,https://mabinogi.nexon.com/page/news/notice_view.asp?id=4890783,2023-06-30,2023-06-30,마비노기 공식 홈페이지,공식 운영 공지,"건의·답변·일정·완료 여부 분기 공개","공개 형식 비교에만 사용·효과 확인 불가",검증 완료·비교 사례
