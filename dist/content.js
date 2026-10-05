@@ -1163,6 +1163,7 @@ window.PORTFOLIO = {
     },
     {
       "id": "league-of-legends",
+      "visible": false,
       "game": "League of Legends",
       "title": "5,560시간 이용자의 솔로 랭크 이탈과 모드 잔존",
       "journeyTitle": "랭크 신뢰 하락에서 대체 모드 잔존까지",
@@ -1685,6 +1686,7 @@ window.PORTFOLIO = {
     },
     {
       "id": "seven-knights-rebirth",
+      "visible": false,
       "game": "세븐나이츠 리버스",
       "title": "소액 패키지의 반복 결제와 효용 감소 분석",
       "journeyTitle": "유입에서 반복 결제와 이탈까지",
@@ -2095,6 +2097,7 @@ window.PORTFOLIO = {
     },
     {
       "id": "cookie-run-kingdom",
+      "visible": false,
       "game": "쿠키런: 킹덤",
       "title": "장기 이용자의 반복 결제와 활동 기록 재구성",
       "journeyTitle": "출시 초기 유입에서 결제 중단까지",
