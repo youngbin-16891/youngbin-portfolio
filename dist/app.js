@@ -33,7 +33,7 @@ function artifactLinks(items) {
 }
 
 const visibleCaseStudies = data.caseStudies.filter((study) => study.visible !== false);
-const featuredCaseIds = new Set(['maplestory']);
+const featuredCaseIds = new Set(['maple-idle']);
 const featuredCaseStudies = visibleCaseStudies.filter((study) => featuredCaseIds.has(study.id));
 const secondaryCaseStudies = visibleCaseStudies.filter((study) => !featuredCaseIds.has(study.id));
 const renderCaseCards = (studies) => studies.map((study) => {
