@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Excel & CSV Data Rescue</title>
+  <meta name="description" content="Fixed-scope Excel and CSV cleanup, restructuring, and data QA with a clear change log.">
+  <style>
+    :root{--ink:#16232d;--muted:#5b6870;--blue:#245b78;--pale:#edf5f8;--line:#d8e2e7;--amber:#fff4cc;--green:#e8f5e9;--paper:#fbfcfd}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Arial,sans-serif}main{max-width:980px;margin:auto;padding:64px 24px 80px}
+    .eyebrow{color:var(--blue);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+    h1{font-size:clamp(38px,6vw,68px);line-height:1.02;letter-spacing:-.045em;margin:12px 0 22px}h2{font-size:25px;letter-spacing:-.02em;margin:0 0 18px}p{margin:0 0 18px;color:var(--muted)}
+    .price{background:var(--blue);color:#fff;border-radius:20px;padding:28px}.price strong{display:block;font-size:42px;line-height:1;margin:8px 0 16px}.price p{color:#eaf4f8}.price ul{margin:0;padding-left:20px}
+    .cta{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:14px 20px;border-radius:10px;font-weight:700;margin-top:8px}.note{font-size:13px;margin-top:12px}
+    .section{margin-top:72px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);border-radius:16px;padding:22px;background:#fff}.card b{display:block;margin-bottom:8px}.card p{font-size:14px;margin:0}
+    .sample{border:1px solid var(--line);background:#fff;border-radius:18px;padding:18px;overflow:hidden}.sample img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+    .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.links a{color:var(--blue);font-weight:700}.steps{counter-reset:s}.steps div{display:grid;grid-template-columns:42px 1fr;gap:14px;margin:18px 0}.steps div:before{counter-increment:s;content:counter(s);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--pale);color:var(--blue);font-weight:700}
+    .ko{border-top:1px solid var(--line);margin-top:72px;padding-top:48px}.ko h2{font-size:30px}.fine{font-size:13px;color:var(--muted);margin-top:56px}
+    @media(max-width:760px){main{padding-top:40px}.hero,.grid{grid-template-columns:1fr}.hero{gap:28px}.grid{gap:12px}}
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Excel & CSV cleanup · Fixed scope</div>
+      <h1>Messy business data, returned ready to use.</h1>
+      <p>I clean and restructure spreadsheets where values sit in the wrong columns, useful details are buried in notes, or duplicate and inconsistent records block the next step.</p>
+      <p>You receive the cleaned file, a field-level change log, and a clear list of values that need your decision. Unclear data is flagged rather than guessed.</p>
+      <a class="cta" href="#start">See the scope</a>
+    </div>
+    <aside class="price">
+      <span>Launch pilot</span><strong>US$60</strong>
+      <ul><li>1 Excel or CSV file</li><li>Up to 300 rows and 15 columns</li><li>1 target layout and 3 agreed rules</li><li>1 correction within scope</li></ul>
+      <p class="note">Final scope and delivery time are confirmed after a redacted sample is reviewed.</p>
+    </aside>
+  </section>
+
+  <section class="section">
+    <h2>What the delivery includes</h2>
+    <div class="grid">
+      <div class="card"><b>Cleaned output</b><p>Consistent fields and formats in the target structure you need.</p></div>
+      <div class="card"><b>Change log</b><p>A record of what changed, at the customer ID and field level.</p></div>
+      <div class="card"><b>Review flags</b><p>Missing, conflicting, or ambiguous values separated for your decision.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Fictional demonstration</h2>
+    <p>This example uses invented company and contact data. It demonstrates the process and is not presented as client work or a customer result.</p>
+    <div class="sample"><img src="sample-result.png" alt="Fictional spreadsheet cleanup result with review flags"></div>
+    <div class="links"><a href="data-rescue-fictional-sample.xlsx" download>Download the fictional workbook</a></div>
+  </section>
+
+  <section class="section" id="start">
+    <h2>How to request a scope check</h2>
+    <div class="steps">
+      <div><p>Send the row and column count, file count, and the problem you need fixed.</p></div>
+      <div><p>Share only 10–20 redacted rows plus the target columns or an example layout.</p></div>
+      <div><p>I confirm the fixed scope, price, and delivery time before work begins.</p></div>
+    </div>
+    <p><b>Reply or DM on the platform where you found this page.</b> Do not send passwords, account access, personal financial data, or confidential records during the scope check.</p>
+  </section>
+
+  <section class="ko">
+    <div class="eyebrow">한국어 안내</div>
+    <h2>잘못된 열과 메모에 섞인 업무 데이터를 정리합니다.</h2>
+    <p>목표 양식에 맞춘 정리 파일, 필드별 변경 기록, 확인이 필요한 값의 목록을 제공합니다. 근거가 부족한 값은 임의로 채우지 않습니다.</p>
+    <p>파일 1개, 최대 300행·15열, 목표 양식 1개, 합의된 규칙 3개와 범위 내 수정 1회를 기준으로 US$60입니다. 개인정보와 기밀을 제거한 10~20행 예시를 확인한 뒤 범위와 납기를 확정합니다.</p>
+  </section>
+  <p class="fine">AI-assisted analysis and checks are used in the workflow. Final output is reviewed against the supplied source. Service availability and payment method are confirmed before work begins.</p>
+</main>
+</body>
+</html>
