@@ -281,7 +281,21 @@ window.PORTFOLIO = {
       "userValidation": {
         "title": "5명 문제 인터뷰로 우선순위를 검증합니다",
         "description": "현재 리포트는 공개자료에서 만든 가설 산출물입니다. 사건을 경험한 지속·중단·복귀 이용자에게 기존 공지와 표본을 비교해 보여주고, 정보 공백이 실제 이용 판단을 막는지 먼저 확인합니다.",
+        "status": "모집 전 · 인터뷰 결과 없음",
+        "statusNote": "현재 공개한 내용은 실행 설계와 빈 기록 양식입니다. 실제 응답과 판정 결과는 인터뷰 완료 뒤에만 반영합니다.",
         "segments": "지속 이용 2명 · 중단 2명 · 환불 후 복귀 검토 1명",
+        "documents": [
+          {
+            "label": "인터뷰 진행안 보기",
+            "meta": "질문 순서 · 판정 규칙",
+            "url": "research/maple-idle-user-validation-plan.md"
+          },
+          {
+            "label": "결과 기록표 보기",
+            "meta": "응답 코딩 · 빈 양식",
+            "url": "research/maple-idle-user-validation-log.csv"
+          }
+        ],
         "questions": [
           "최근 후속 조치 중 알고 있거나 직접 확인한 것은 무엇인가?",
           "계속 이용하거나 복귀할지 판단할 때 아직 모르는 정보는 무엇인가?",
