@@ -39,13 +39,14 @@ const secondaryCaseStudies = visibleCaseStudies.filter((study) => !featuredCaseI
 const renderCaseCards = (studies) => studies.map((study) => {
   const index = visibleCaseStudies.indexOf(study);
   const cardMeta = study.cardMeta?.length ? `<div class="case-card-meta">${study.cardMeta.map((item) => `<span>${escapeHTML(item)}</span>`).join('')}</div>` : '';
+  const cardBrief = study.cardBrief?.length ? `<dl class="case-card-brief">${study.cardBrief.map((item) => `<div><dt>${escapeHTML(item.label)}</dt><dd>${escapeHTML(item.text)}</dd></div>`).join('')}</dl>` : '';
   const cardFacts = study.cardFacts?.length ? `<ul class="case-card-facts">${study.cardFacts.map((item) => `<li>${escapeHTML(item)}</li>`).join('')}</ul>` : '';
   const coverSrc = assetURL(study.cover?.src);
   const cardCover = coverSrc ? `<figure class="case-cover case-cover-${escapeHTML(study.id)}" aria-hidden="true"><img src="${escapeHTML(coverSrc)}" alt="" loading="lazy"></figure>` : '';
   const cardSide = cardCover || cardFacts ? `<div class="case-card-side">${cardCover}${cardFacts}</div>` : '';
   const featuredClass = featuredCaseIds.has(study.id) ? ' featured-case-card' : '';
   const reviewLabel = featuredCaseIds.has(study.id) ? '30초 결론부터 검토하기' : '1분 요약부터 검토하기';
-  return `<article class="case-card${featuredClass}"><div class="case-folder" aria-hidden="true"></div><div class="case-card-top"><span>0${index + 1}</span>${badge(study.status)}</div><div class="case-card-copy"><p class="case-game">${escapeHTML(study.game)}</p><h3>${escapeHTML(study.title)}</h3>${cardMeta}<p>${escapeHTML(study.summary)}</p></div>${cardSide}<button type="button" class="case-open" data-open-case="${escapeHTML(study.id)}">${reviewLabel} <span aria-hidden="true">→</span></button></article>`;
+  return `<article class="case-card${featuredClass}"><div class="case-folder" aria-hidden="true"></div><div class="case-card-top"><span>0${index + 1}</span>${badge(study.status)}</div><div class="case-card-copy"><p class="case-game">${escapeHTML(study.game)}</p><h3>${escapeHTML(study.title)}</h3>${cardMeta}${cardBrief}</div>${cardSide}<button type="button" class="case-open" data-open-case="${escapeHTML(study.id)}">${reviewLabel} <span aria-hidden="true">→</span></button></article>`;
 }).join('');
 document.querySelector('#case-studies').innerHTML = `<section class="project-tier featured-tier"><div class="project-tier-heading"><span>FEATURED · 대표작</span><p>공개자료의 비교 가능성을 검토하고 경쟁 가설에서 조건부 사업 액션까지 연결합니다.</p></div><div class="case-card-grid">${renderCaseCards(featuredCaseStudies)}</div></section>${secondaryCaseStudies.length ? `<section class="project-tier supporting-tier"><div class="project-tier-heading"><span>SUPPORTING · 보조작</span><p>이벤트 종료 후 한 이용자의 실제 행동과 자기 보고 동기를 분리해 관찰합니다.</p></div><div class="case-card-grid">${renderCaseCards(secondaryCaseStudies)}</div></section>` : ''}`;
 const dialog = document.createElement('dialog');
