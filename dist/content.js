@@ -158,6 +158,11 @@ window.PORTFOLIO = {
       "dataTitle": "공식 IR·공개 시장 지표·개인 행동 기록",
       "dataDescription": "회사 공식 자료, 외부 추정 지표, 결제 화면, 개인 회상을 근거 수준별로 구분했습니다.",
       "status": "Public Evidence Audit",
+      "cover": {
+        "src": "assets/maple-idle/refunded-launch-purchases.jpg",
+        "alt": "메이플 키우기 출시 초기 결제 내역에 환불됨이 표시된 화면",
+        "caption": "직접 결제 기록 · 환불 표시 확인"
+      },
       "cardMeta": [
         "대표 프로젝트",
         "공식 IR·후속조치 추적",
@@ -564,6 +569,11 @@ window.PORTFOLIO = {
       "title": "이벤트 종료 후에도 남은 한 이용자의 행동",
       "journeyTitle": "챌린저스 유입에서 스카니아 정착까지",
       "status": "Personal Journey Study",
+      "cover": {
+        "src": "assets/maplestory/character-lv286.png",
+        "alt": "메이플스토리 레벨 286 캐릭터 프로필 화면",
+        "caption": "직접 플레이 기록 · Lv.286"
+      },
       "cardMeta": [
         "보조 프로젝트",
         "1인 사용자 여정",
