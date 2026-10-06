@@ -152,7 +152,7 @@ window.PORTFOLIO = {
   "caseStudies": [
     {
       "id": "maple-idle",
-      "game": "메이플 키우기",
+      "game": "메이플 키우기 서비스 신뢰 회복 분석",
       "title": "환불 이후, 신뢰 회복은 어떻게 증명되는가",
       "journeyTitle": "사건 대응에서 약속 이행·결과 공개까지",
       "dataTitle": "공식 IR·공개 시장 지표·개인 행동 기록",
