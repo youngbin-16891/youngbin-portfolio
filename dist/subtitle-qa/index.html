@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 한국어 자막 검수 파일럿</title>
+  <meta name="description" content="영어 원문과 AI 초벌 한국어 SRT를 대조해 의미 오류, 어색한 표현, 누락과 확인 필요 항목을 정리합니다.">
+  <style>
+    :root{--ink:#17202a;--muted:#586473;--line:#dce3e9;--paper:#f6f8fa;--accent:#176b5b;--soft:#e8f3ef}*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;background:var(--paper);line-height:1.65}.wrap{width:min(960px,calc(100% - 36px));margin:auto}.hero{padding:88px 0 64px;background:#fff;border-bottom:1px solid var(--line)}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.13em;color:var(--accent);text-transform:uppercase}.hero h1{font-size:clamp(38px,6vw,66px);line-height:1.08;letter-spacing:-.045em;max-width:850px;margin:18px 0}.lead{font-size:18px;color:var(--muted);max-width:720px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.button{display:inline-block;padding:13px 18px;border-radius:8px;text-decoration:none;font-weight:750}.primary{background:var(--accent);color:#fff}.secondary{border:1px solid var(--line);color:var(--ink);background:#fff}.section{padding:64px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}.card h2,.card h3{margin-top:0}.price{font-size:40px;font-weight:850;letter-spacing:-.04em}.note{font-size:13px;color:var(--muted)}ul{padding-left:20px}.sample{background:#101b24;color:#eef5f3}.sample .note{color:#b9c9c5}.sample a{color:#8fe1ca}.facts{display:grid;grid-template-columns:1fr 1fr;gap:22px}.warning{background:#fff8e8;border:1px solid #ead8aa;border-radius:10px;padding:18px}.footer{padding:32px 0 50px;color:var(--muted);font-size:13px}@media(max-width:720px){.hero{padding-top:58px}.grid,.facts{grid-template-columns:1fr}.hero h1{font-size:42px}}
+  </style>
+</head>
+<body>
+  <header class="hero"><div class="wrap">
+    <div class="eyebrow">English → Korean subtitle QA · Paid pilot</div>
+    <h1>AI 초벌 자막에서<br>의미가 바뀐 문장을 찾습니다.</h1>
+    <p class="lead">영어 원문과 기존 한국어 SRT를 대조해 부정문·수치·용어·관용구·누락을 확인하고, 수정 이유와 확인 필요 항목을 함께 전달합니다.</p>
+    <div class="actions"><a class="button primary" href="mailto:cyb050602@gmail.com?subject=AI%20한국어%20자막%20검수%20파일럿%20문의&body=영상%20길이%2C%20영어%20원문%20단어%20수%2C%20SRT%20유무%2C%20희망%20납기를%20알려주세요.%20민감정보나%20원본%20파일은%20첫%20메일에%20첨부하지%20말아주세요.">39,000원 파일럿 문의</a><a class="button secondary" href="after.ko.srt" download>허구 샘플 SRT</a></div>
+  </div></header>
+
+  <main>
+    <section class="section"><div class="wrap">
+      <div class="grid">
+        <article class="card"><h2>고정 범위</h2><div class="price">39,000원</div><ul><li>영상 1개, 최대 5분</li><li>영어 원문 최대 800단어</li><li>기존 한국어 SRT 1개</li><li>합의 범위 내 수정 1회</li></ul><p class="note">시장 평균이 아니라 첫 유료 검증을 위한 가격 가설입니다.</p></article>
+        <article class="card"><h2>납품물</h2><ul><li>수정된 UTF-8 SRT</li><li>핵심 변경 이유 목록</li><li>고유명사·발음 등 확인 필요 항목</li><li>번호·타임코드·중첩 구조 검사 결과</li></ul></article>
+        <article class="card"><h2>검수 기준</h2><ul><li>의미 반전과 부정문 누락</li><li>수치·단위·고유명사</li><li>직역된 관용구와 어색한 문장</li><li>원문 누락·과잉 번역</li></ul></article>
+      </div>
+    </div></section>
+
+    <section class="section sample"><div class="wrap">
+      <div class="eyebrow">Fictional demonstration</div>
+      <h2>실제 고객 작업이 아닌 허구 시연입니다.</h2>
+      <p>의도적으로 넣은 오역 여섯 개를 수정했습니다. 영상과 음성이 없는 예시이므로 싱크 정확도나 실제 납품 성과를 보여주는 자료는 아닙니다.</p>
+      <p><a href="before.ko.srt">수정 전 SRT 보기</a> · <a href="after.ko.srt">수정 후 SRT 보기</a> · <a href="QA.md">변경 근거 보기</a></p>
+    </div></section>
+
+    <section class="section"><div class="wrap facts">
+      <article><h2>먼저 확인할 정보</h2><ul><li>영상 길이와 영어 원문 단어 수</li><li>SRT 파일 유무와 원하는 납기</li><li>콘텐츠 종류와 핵심 용어</li><li>영상·원문 사용 권한</li></ul><p class="note">첫 문의에는 민감정보나 원본 파일을 보내지 말고 범위만 알려주세요.</p></article>
+      <article><h2>이번 범위에서 제외</h2><ul><li>더빙·음성 생성·영상 인코딩</li><li>원문 없는 번역 정확도 보증</li><li>영상 없는 싱크 검수</li><li>의학·법률 등 전문 책임 검수</li></ul><div class="warning">모호한 내용은 추측해서 확정하지 않고 확인 필요 항목으로 남깁니다.</div></article>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="wrap">© 2026 · AI 한국어 자막 검수 파일럿 · 문의 cyb050602@gmail.com</div></footer>
+</body>
+</html>
