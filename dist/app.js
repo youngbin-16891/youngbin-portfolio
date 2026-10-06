@@ -41,7 +41,7 @@ const renderCaseCards = (studies) => studies.map((study) => {
   const cardMeta = study.cardMeta?.length ? `<div class="case-card-meta">${study.cardMeta.map((item) => `<span>${escapeHTML(item)}</span>`).join('')}</div>` : '';
   const cardFacts = study.cardFacts?.length ? `<ul class="case-card-facts">${study.cardFacts.map((item) => `<li>${escapeHTML(item)}</li>`).join('')}</ul>` : '';
   const coverSrc = assetURL(study.cover?.src);
-  const cardCover = coverSrc ? `<figure class="case-cover case-cover-${escapeHTML(study.id)}"><img src="${escapeHTML(coverSrc)}" alt="${escapeHTML(study.cover.alt)}" loading="lazy"><figcaption>${escapeHTML(study.cover.caption)}</figcaption></figure>` : '';
+  const cardCover = coverSrc ? `<figure class="case-cover case-cover-${escapeHTML(study.id)}" aria-hidden="true"><img src="${escapeHTML(coverSrc)}" alt="" loading="lazy"></figure>` : '';
   const cardSide = cardCover || cardFacts ? `<div class="case-card-side">${cardCover}${cardFacts}</div>` : '';
   const featuredClass = featuredCaseIds.has(study.id) ? ' featured-case-card' : '';
   const reviewLabel = featuredCaseIds.has(study.id) ? '30초 결론부터 검토하기' : '1분 요약부터 검토하기';
@@ -116,7 +116,11 @@ function openCase(id) {
     : study.compactSecondary
       ? ['1인 여정', '확인 행동', '자기 보고 동기', '검증 한계']
       : ['1분 요약', '핵심 문제', '개선안', '판단 기준'];
-  dialog.innerHTML = `<div class="dialog-shell"><button class="dialog-close" type="button" aria-label="프로젝트 상세 닫기">×</button><div class="case-top"><p class="eyebrow">PROJECT 0${Math.max(index, 0) + 1} · ${escapeHTML(study.game)}</p>${badge(study.status)}</div><h2 id="case-dialog-title">${escapeHTML(study.title)}</h2><p class="case-summary">${escapeHTML(study.summary)}</p><p class="case-question"><strong>핵심 질문</strong>${escapeHTML(study.question)}</p><div class="review-route" aria-label="권장 검토 순서"><strong>검토 순서</strong>${reviewRoute.map((item, i) => `${i ? '<i>→</i>' : ''}<span>${escapeHTML(item)}</span>`).join('')}</div>${executiveSummary}${finalDecision}${selectedActionOutput}${actionOptions}${benchmarkDetails}${researchDetails}${actionDetails}${interviewPitch}${supportingDetails}</div>`;
+  const detailBackdrop = assetURL(study.cover?.src);
+  const detailHeroClass = detailBackdrop ? ' case-detail-hero-with-image' : '';
+  const detailHeroImage = detailBackdrop ? `<img class="case-detail-backdrop case-detail-backdrop-${escapeHTML(study.id)}" src="${escapeHTML(detailBackdrop)}" alt="" aria-hidden="true">` : '';
+  const detailHeroCredit = detailBackdrop && study.cover?.credit ? `<small class="case-background-credit">${escapeHTML(study.cover.credit)}</small>` : '';
+  dialog.innerHTML = `<div class="dialog-shell"><button class="dialog-close" type="button" aria-label="프로젝트 상세 닫기">×</button><header class="case-detail-hero${detailHeroClass}">${detailHeroImage}<div class="case-detail-hero-content"><div class="case-top"><p class="eyebrow">PROJECT 0${Math.max(index, 0) + 1} · ${escapeHTML(study.game)}</p>${badge(study.status)}</div><h2 id="case-dialog-title">${escapeHTML(study.title)}</h2>${detailHeroCredit}</div></header><p class="case-summary">${escapeHTML(study.summary)}</p><p class="case-question"><strong>핵심 질문</strong>${escapeHTML(study.question)}</p><div class="review-route" aria-label="권장 검토 순서"><strong>검토 순서</strong>${reviewRoute.map((item, i) => `${i ? '<i>→</i>' : ''}<span>${escapeHTML(item)}</span>`).join('')}</div>${executiveSummary}${finalDecision}${selectedActionOutput}${actionOptions}${benchmarkDetails}${researchDetails}${actionDetails}${interviewPitch}${supportingDetails}</div>`;
   dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
   dialog.scrollTop = 0;
   document.body.classList.add('dialog-open');
