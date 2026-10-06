@@ -64,3 +64,49 @@ html,body{overflow-x:clip}
 .supporting-tier .project-tier-heading{padding-inline:12px}
 #capabilities .process-step,#capabilities .data-panel,#capabilities .skill-card{background:#fffefa}
 @media(max-width:680px){.supporting-tier .project-tier-heading{padding-inline:0}}
+.user-validation {
+  background: #f2f5f3;
+  border: 1px solid #c9d5cd;
+}
+.validation-brief {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 28px 0 0;
+  border-top: 1px solid var(--line);
+}
+.validation-brief div { padding: 18px 20px; border-bottom: 1px solid var(--line); }
+.validation-brief div + div { border-left: 1px solid var(--line); }
+.validation-brief dt,
+.validation-rules span { color: var(--accent); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.validation-brief dd { margin: 8px 0 0; color: var(--text); line-height: 1.7; }
+.validation-questions {
+  margin: 28px 0 0;
+  padding: 0;
+  counter-reset: validation-question;
+  list-style: none;
+}
+.validation-questions li {
+  position: relative;
+  padding: 16px 18px 16px 54px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  line-height: 1.7;
+}
+.validation-questions li::before {
+  counter-increment: validation-question;
+  content: "0" counter(validation-question);
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  color: var(--accent);
+  font-size: .75rem;
+  font-weight: 800;
+}
+.validation-rules { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 28px; }
+.validation-rules article { padding: 20px; background: rgba(255,255,255,.72); border: 1px solid var(--line); }
+.validation-rules p { margin: 10px 0 0; line-height: 1.7; }
+@media (max-width: 680px) {
+  .validation-brief,
+  .validation-rules { grid-template-columns: 1fr; }
+  .validation-brief div + div { border-left: 0; }
+}
