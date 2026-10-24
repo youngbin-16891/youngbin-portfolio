@@ -3,9 +3,9 @@
 // C Maple Idle operations. Experience data must never add or replace projects.
 const deliverables = [
   {role:'A · 사업 PM',game:'메이플스토리',title:'제네시스 패스의 구매 가치와 BM 분석',status:'공개자료 기반 BM 분석',href:'reports/genesis-pass.html',
-   takeaways:[['핵심 문제','누구에게 해방 가속이 구매 가치가 되고, 어떤 조건에서는 구매 장벽이 되는가?'],['확인한 사실','공식 가격은 30,000 넥슨 캐시. 실제 구매 후 7월 말쯤 해방했다는 본인 회상을 구분했습니다.'],['해석','가속 가치는 보스 도전 능력과 남은 기간에 따라 다릅니다. 구매가 잔존을 높였는지는 미확인입니다.']],
+   takeaways:[['핵심 문제','누구에게 해방 가속이 구매 가치가 되고, 어떤 조건에서는 구매 장벽이 되는가?'],['확인한 사실','기본 패스는 30,000 넥슨 캐시·흔적 3배. PLUS 유료 보상은 별도 가격과 보스 조건이 있습니다.'],['해석','기본 구매와 후속 구매는 다른 판단입니다. 보상 활용 가능성과 완료를 먼저 확인하도록 제안했습니다.']],
    output:'상품 조건·혜택 비교 · 조건별 보상 계산 · 구매 장벽 · 유지·안내 제안 · KPI 정의',note:'구매 증빙과 7월 말쯤 해방 완료라는 본인 회상 구분 · 실제 단축 일수 미확인 · 일부 보스 처치가 어려워 PLUS 미구매(본인 진술)'},
-  {role:'B · 라이브서비스 PM',game:'FC 온라인',title:'이벤트 보상 수령을 실제 경기 참여로 연결하려면?',status:'공식 이벤트 분석 · 모의 개선안',href:'reports/fc-live-event.html',tag:'N=1 관찰 → 라이브서비스 가설 도출',
+  {role:'B · 라이브서비스 PM',game:'FC 온라인',title:'이벤트 보상 수령을 실제 경기 참여로 연결하려면?',status:'공식 이벤트 분석 · 모의 개선안',href:'reports/fc-live-event.html',
    takeaways:[['핵심 문제','접속 보상 수령과 실제 경기 참여를 같은 성과로 볼 수 있는가?'],['확인한 문제','공식 본문과 유의사항에서 3일 미션의 인정 조건 설명이 달랐습니다.'],['해석','참여 조건 혼선은 확인했지만, 경기 미참여 원인이 안내 부족인지는 추가 검증이 필요합니다.']],
    output:'조건·보상표 · 행동 흐름 · 개선 기획서 · 지급·예외 처리 · 공지 · 성과 측정',note:'N=1은 본인 1명의 경험 · 시세 인플레이션·이탈 패턴 관측 없음 · 서버 판정·효과 미검증'},
   {role:'C · 게임 운영',game:'메이플 키우기 · 운영 대응',title:'환불 이슈 발생 시 유저 신뢰 및 이탈 위험 대응',status:'공개 사건 기반 모의 대응',href:'reports/idle-operations.html',
@@ -30,5 +30,5 @@ if (cards) {
       ${d.conditions?`<div class="project-conditions">${d.conditions.map((c,j)=>`<section class="project-condition ${j?'hold':'execute'}" aria-labelledby="project-condition-${i}-${j}"><h4 id="project-condition-${i}-${j}">${c[0]}</h4><p>${c[1]}</p></section>`).join('')}</div>`:''}
       <dl class="project-output"><dt>작성한 결과물</dt><dd>${d.output}</dd></dl>
       <dl class="project-next"><dt>제안·후속 검증</dt><dd>${projectNextSteps[i]}</dd></dl><small>${d.note}</small><a class="button secondary" href="${d.href}">분석·실무 문서 보기 ↗</a>
-    </article>`).join('')+'</div><p class="review-note">현재 재설계 검토본입니다. 실제 운영 결과가 아닌 분석·모의 과제이며, 남은 검증은 각 문서에 표시했습니다. <a href="reports/youngbin-work-samples-review.pdf">이전 PDF 검토본 보기</a> · <a href="reports/audit.html">기존 자료 감사</a> · <a href="reports/source-ledger.html">출처·확인 한계</a></p>';
+    </article>`).join('')+'</div><p class="review-note">공개자료 분석·모의 실무 문서입니다. 실제 운영 성과와 구분해 읽을 수 있도록 출처와 측정 계획을 함께 제시했습니다. <a href="reports/youngbin-work-samples-review.pdf">이전 PDF 보관본</a> · <a href="reports/audit.html">기존 자료 감사</a> · <a href="reports/source-ledger.html">출처·확인 한계</a></p>';
 }
