@@ -31,6 +31,10 @@ h=h.replace(/<link rel="stylesheet" href="integration.css[^" ]*">/g,'').replace(
 // B evidence captures were inserted before the next section: keep them with core evidence.
 h=h.replaceAll('loading="lazy"','loading="eager"').replace('src="report.js"','src="report.js?v=20261024integrated"');
 h=h.replace(/<a class="summary-entry"[^>]*>[\s\S]*?<\/a>/g,'').replace('</nav>','<a class="summary-entry" href="'+c.file+'-summary.html">1페이지 요약 ↗</a></nav>');
+h=h.replace(/\n{2,}/g,'\n');
 fs.writeFileSync(p,h);
 }
 console.log('A/B/C integrated, original tables and sources retained.');
+
+cp.execFileSync('node',[root+'build-a-reading.mjs'],{stdio:'inherit'});
+cp.execFileSync('node',[root+'build-service-visuals.mjs'],{stdio:'inherit'});

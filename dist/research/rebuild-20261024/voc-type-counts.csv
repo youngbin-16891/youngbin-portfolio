@@ -1,0 +1,6 @@
+code,label,count,case_ids
+TRUST,오류·고지·대응에 대한 불신,4,V02;V04;V05;V12
+ACCOUNT_RESTRICTION,환불과 계정 제한 결합에 이의,1,V07
+CONTINUITY,시간·캐릭터·닉네임 연속성 우려,2,V06;V09
+RESPONSE_POSITIVE,환불 대응 긍정,1,V03
+POLICY_RATIONALE,성장 회수 관점에서 제한 설명,1,V08
