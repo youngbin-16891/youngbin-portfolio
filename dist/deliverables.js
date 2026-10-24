@@ -18,17 +18,36 @@ const projectNextSteps = [
   '규칙을 일치시킨 뒤 첫 보상 수령자에게 경기 준비 안내를 시험합니다. 퀵스쿼드는 보유자에게만 안내하고, 첫 경기 완료와 반복 플레이를 구분합니다.',
   '신청 전 계정 영향 FAQ와 거래별 처리 확인을 우선합니다. 미처리·중복·재문의와 활동 변화를 구분해 모니터링합니다.'
 ];
+
+const previews=[
+ {src:'assets/maplestory/genesis-pass-user-guide.png',alt:'제네시스 패스 실제 상품 안내',caption:'지원자 제공 상품 이미지'},
+ {src:'assets/report-previews/fc-flow.png',alt:'접속 보상과 경기 참여를 구분한 보고서 행동 흐름도',caption:'보고서 발췌 · 행동 흐름'},
+ {src:'assets/report-previews/idle-account-states.png',alt:'접수부터 사후 점검까지의 모의 운영 대응 흐름',caption:'보고서 발췌 · 모의 대응 절차'}
+];
+deliverables[0].title='기본 패스는 구매하고, PLUS는 구매하지 않은 이유';
+deliverables[0].takeaways=[['핵심 질문','성장 가속과 해방 후 추가 보상은 같은 구매 판단일까?'],['근거 · 공식·개인','기본 패스 30,000캐시·흔적 3배. 본인은 기본 패스를 구매하고 PLUS 프리미엄 티켓은 미구매.'],['핵심 판단','시간 단축은 선택했지만, 후속 보스 수행 부담과 큐브 결과의 불확실성은 추가 구매의 장벽이었다.']];
+deliverables[0].note='개인 사례의 판단이며 전체 구매자 동기로 일반화하지 않습니다. PLUS 일반 미션 참여와 유료 프리미엄 티켓은 구분합니다.';
+deliverables[0].output='상품 비교표 · 구매 판단 흐름도 · 조건부 의사결정표 · KPI 측정 계획';
+deliverables[1].takeaways=[['핵심 질문','보상을 받으러 온 이용자는 무엇을 거쳐 경기를 시작할까?'],['근거 · 공식','FC KICK-OFF 이벤트에 접속 보상과 경기 미션이 별도로 존재한다.'],['핵심 판단','보상 수령은 경기 참여의 증거가 아니다. 규칙을 확인한 뒤 첫 경기 준비 안내의 효과를 시험한다.']];
+deliverables[1].output='이벤트 조건표 · 행동 흐름도 · 모의 공지·지급 예외표 · 전환 측정 계획';
+deliverables[2].title='계정 제한과 자발적 이탈을 구분한 환불 대응';
+deliverables[2].takeaways=[['핵심 질문','환불 이후 미접속을 모두 자발적 이탈로 볼 수 있을까?'],['근거 · 공식·공개 반응','공식 FAQ는 신청 즉시 계정 이용 제한을 안내한다. 공개 댓글 15개 검토·9개 포함.'],['핵심 판단','접속 불가능한 계정과 자발적으로 멈춘 계정을 나눠야 한다. 처리 완료만으로 신뢰 회복을 판단하지 않는다.']];
+deliverables[2].output='사건 타임라인 · VOC 분류표 · 모의 공지·FAQ·CS 기준 · 계정 상태별 측정 계획';
+
 const cards = document.querySelector('#case-studies');
 if (cards) {
   cards.innerHTML = '<div class="deliverable-grid">'+deliverables.map((d,i)=>`
-    <article class="deliverable-card" aria-labelledby="project-title-${i+1}">
-      <div class="deliverable-role">${d.role}<span>${d.status}</span></div>
-      <p class="eyebrow">${d.game}</p><h3 id="project-title-${i+1}">${d.title}</h3>
-      ${d.tag?`<p class="project-observation-tag">${d.tag}</p>`:''}
-      ${d.metrics?`<div class="project-metrics" aria-label="분기별 매출 영향 추정">${d.metrics.map(m=>`<div><span>${m[0]}</span><strong>${m[1]}</strong></div>`).join('')}<p>분기별 매출 영향 추정 · 최종 환불액 아님<br><a href="https://pdf.irpocket.com/C3659/doF3/BPCC/GXD2.pdf" target="_blank" rel="noopener noreferrer">출처: 넥슨 FY2025 Q4 Q&A ↗</a></p></div>`:''}
-      <dl class="project-takeaways">${d.takeaways.map(t=>`<div><dt>${t[0]}</dt><dd>${t[1]}</dd></div>`).join('')}</dl>
-      ${d.conditions?`<div class="project-conditions">${d.conditions.map((c,j)=>`<section class="project-condition ${j?'hold':'execute'}" aria-labelledby="project-condition-${i}-${j}"><h4 id="project-condition-${i}-${j}">${c[0]}</h4><p>${c[1]}</p></section>`).join('')}</div>`:''}
-      <dl class="project-output"><dt>작성한 결과물</dt><dd>${d.output}</dd></dl>
-      <dl class="project-next"><dt>제안·후속 검증</dt><dd>${projectNextSteps[i]}</dd></dl><small>${d.note}</small><div class="report-entry-links"><a class="button secondary" href="${d.href.replace('.html','-summary.html')}">1페이지 요약 ↗</a><a class="text-link" href="${d.href}">전체 보고서 ↗</a></div>
-    </article>`).join('')+'</div><p class="review-note">공개자료 분석·모의 실무 문서입니다. 실제 운영 성과와 구분해 읽을 수 있도록 출처와 측정 계획을 함께 제시했습니다. <a href="reports/youngbin-work-samples-review.pdf">이전 PDF 보관본</a> · <a href="reports/audit.html">기존 자료 감사</a> · <a href="reports/source-ledger.html">출처·확인 한계</a></p>';
+ <article class="deliverable-card review-card" aria-labelledby="project-title-${i+1}">
+ <div class="deliverable-role">${d.role}<span>${d.status}</span></div>
+ <div class="review-card-layout"><figure class="project-preview"><a href="${d.href}" aria-label="${d.game} 상세 보고서"><img src="${previews[i].src}" alt="${previews[i].alt}" loading="lazy"></a><figcaption>${previews[i].caption}</figcaption></figure>
+ <div class="review-card-copy"><p class="eyebrow">${d.game}</p><h3 id="project-title-${i+1}">${d.title}</h3>
+ <dl class="project-takeaways">${d.takeaways.map(t=>`<div><dt>${t[0]}</dt><dd>${t[1]}</dd></div>`).join('')}</dl>
+ <dl class="project-output"><dt>실제 작성 문서</dt><dd>${d.output}</dd></dl>
+ <div class="report-entry-links"><a class="button secondary" href="${d.href.replace('.html','-summary.html')}">1페이지 요약 ↗</a><a class="text-link" href="${d.href}">상세 보고서 ↗</a></div>
+ <details class="project-scope"><summary>제안과 확인 범위</summary><p>${projectNextSteps[i]}</p><p>${d.note}</p>${d.conditions?d.conditions.map(c=>`<p><b>${c[0]}</b> · ${c[1]}</p>`).join(''):''}</details>
+ </div></div></article>`).join('')+'</div><details class="review-note"><summary>이전 분석 자료와 출처 감사 보기</summary><p>기존 자료는 보존했습니다. 현재 제출용 결과물은 위 세 보고서입니다.</p><a href="reports/youngbin-work-samples-review.pdf">이전 PDF 보관본</a> · <a href="reports/audit.html">기존 자료 감사</a> · <a href="reports/source-ledger.html">출처·확인 한계</a></details>';
+
 }
+
+// Current work samples first; historical research remains accessible.
+const oldTopics=document.querySelector('#data-topics');if(oldTopics){const previous=oldTopics.innerHTML;oldTopics.innerHTML='<div class="current-evidence"><a href="reports/genesis-pass.html#analysis">A · 공식 혜택과 개인 구매 판단 비교</a><a href="reports/fc-live-event.html#measurement">B · 수령과 경기 참여의 측정 기준 구분</a><a href="reports/idle-operations.html#measurement">C · 계정 상태별 접속 변화 해석</a></div><details><summary>이전 조사 주제 보기</summary>'+previous+'</details>';}
