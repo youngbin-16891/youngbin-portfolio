@@ -21,8 +21,8 @@ const projectNextSteps = [
 
 const previews=[
  {src:'assets/maplestory/genesis-pass-user-guide.png',alt:'제네시스 패스 실제 상품 안내',caption:'지원자 제공 상품 이미지'},
- {src:'assets/report-previews/fc-flow.png',alt:'접속 보상과 경기 참여를 구분한 보고서 행동 흐름도',caption:'보고서 발췌 · 행동 흐름'},
- {src:'assets/report-previews/idle-account-states.png',alt:'접수부터 사후 점검까지의 모의 운영 대응 흐름',caption:'보고서 발췌 · 모의 대응 절차'}
+ {src:'reports/evidence/fc-event-opening-20261024.png',alt:'공식 FC KICK-OFF 신규·복귀 이벤트 화면',caption:'공식 이벤트 화면 · 2026.10.24 열람'},
+ {src:'reports/evidence/idle-refund-faq-20261024.png',alt:'공식 환불 FAQ의 신청 즉시 계정 이용 제한 안내',caption:'공식 영문 FAQ · 2026.10.24 열람'}
 ];
 deliverables[0].title='기본 패스는 구매하고, PLUS는 구매하지 않은 이유';
 deliverables[0].takeaways=[['핵심 질문','성장 가속과 해방 후 추가 보상은 같은 구매 판단일까?'],['근거 · 공식·개인','기본 패스 30,000캐시·흔적 3배. 본인은 기본 패스를 구매하고 PLUS 프리미엄 티켓은 미구매.'],['핵심 판단','시간 단축은 선택했지만, 후속 보스 수행 부담과 큐브 결과의 불확실성은 추가 구매의 장벽이었다.']];
@@ -51,3 +51,4 @@ if (cards) {
 
 // Current work samples first; historical research remains accessible.
 const oldTopics=document.querySelector('#data-topics');if(oldTopics){const previous=oldTopics.innerHTML;oldTopics.innerHTML='<div class="current-evidence"><a href="reports/genesis-pass.html#analysis">A · 공식 혜택과 개인 구매 판단 비교</a><a href="reports/fc-live-event.html#measurement">B · 수령과 경기 참여의 측정 기준 구분</a><a href="reports/idle-operations.html#measurement">C · 계정 상태별 접속 변화 해석</a></div><details><summary>이전 조사 주제 보기</summary>'+previous+'</details>';}
+

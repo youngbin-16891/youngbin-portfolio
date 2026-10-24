@@ -88,3 +88,4 @@
 @media print{#projects .review-card-layout{grid-template-columns:25% 1fr;gap:16px}#projects .deliverable-card{break-inside:avoid;padding:16px}#projects .review-card h3{font-size:15pt}#projects .project-takeaways dd{font-size:9pt}#projects .project-takeaways>div{grid-template-columns:75px 1fr}#projects .project-scope,.review-note{display:none}#projects .project-takeaways dt{font-size:8pt}.reveal{opacity:1!important;transform:none!important}}
 @media(prefers-color-scheme:dark){#projects::before{background:var(--bg)}#projects .section-heading h2{color:var(--text)}}
 @media print{.skip-link{display:none!important}#projects::before{background:white!important}.product-preview{break-inside:avoid}}
+#projects .project-method{margin:24px 0;font-size:12px;color:var(--muted)}#projects .project-method summary{cursor:pointer}#projects .project-method .section-intro{margin:16px 0}#projects .section-heading{margin-bottom:28px}
