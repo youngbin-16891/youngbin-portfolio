@@ -12,3 +12,7 @@ header,main,footer{width:min(100% - 64px,1120px);max-width:1120px}.report-header
 @media(max-width:700px){.core-table th,.core-table td{padding:10px;font-size:14px;line-height:1.7}}
 
 @media screen and (max-width:700px){#action h3{word-break:keep-all}#action h3 small{display:block;font-size:12px;line-height:1.6;font-weight:500;color:var(--muted);margin-top:5px}}
+
+/* Practical mobile QA: screen only; preserve printed reports. */
+@media screen{.family-topbar a,.family-topbar .print{display:inline-flex;align-items:center;min-height:44px}.report-header .family-topbar{padding:10px 0}.family-overview figcaption,.report-section figcaption,.figure-note,.product-source{font-size:13px}.table-wrap:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.report-section details>summary{min-height:44px;align-content:center}}
+@media screen and (max-width:700px){.report-header .family-topbar{padding:8px 0}}

@@ -42,7 +42,7 @@ for(const slug of ['genesis-pass','fc-live-event','idle-operations']){
  for(const x of document.querySelectorAll('#sources p'))if(x.textContent.startsWith('AI가 공개자료 확인·분석·문서·웹 구현을 보조했다.'))x.remove();
  document.documentElement.dataset.finalEdit='20261024';
  },slug);
- const html=await p.content();fs.writeFileSync('dist/reports/'+slug+'.html',html.replace(/report-family.css\?v=20261024/g,'report-family.css?v=20261024edit'));
+ const html=await p.content();fs.writeFileSync('dist/reports/'+slug+'.html',html.replace(/report-family.css\?v=20261024/g,'report-family.css?v=20261025mobile'));
  console.log(slug+' edited; original detailed definitions retained in appendix');
 }
 await b.close();

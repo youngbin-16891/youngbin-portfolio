@@ -96,3 +96,8 @@
 @media(max-width:900px){.hero{grid-template-columns:1fr;gap:26px;padding-block:32px}.hero-projects{padding:16px 20px}.hero-projects>a{padding:12px 0}.hero-projects strong{font-size:15px}}
 @media(max-width:700px){.hero h1{font-size:38px;margin-top:10px}.hero h1>span{font-size:16px}.hero-question{font-size:29px}.hero-description{font-size:15px}.hero-experience{font-size:11px}.hero-projects>a{grid-template-columns:64px 1fr 14px;gap:12px}.hero-projects img{width:64px;height:48px}#projects{padding-block:42px}#projects .review-card-layout{grid-template-columns:1fr;gap:18px}#projects .project-preview img{max-height:200px}#projects .project-finding{font-size:14px}.work-tools{grid-template-columns:1fr;gap:14px}.work-tools>div{grid-template-columns:75px 1fr;font-size:13px}.compact-work h2{font-size:25px}#about{padding-block:44px}}
 @media print{.hero-projects{display:none}.hero{display:block}.hero-experience{font-size:8pt}#projects .review-card-layout{grid-template-columns:25% 1fr}#projects .project-finding{font-size:10pt}.compact-work{padding-block:20px}}
+
+/* Practical mobile QA: screen only; preserve printed reports. */
+@media screen{.menu-toggle{min-height:44px}.report-entry-links a,#projects .submission-download a{display:inline-flex;align-items:center;min-height:44px}#projects .project-preview figcaption{font-size:13px}}
+@media screen and (max-width:700px){#projects .project-finding{font-size:15px}#navigation a{min-height:44px}}
+@media screen and (prefers-color-scheme:light){:root{--muted:#626971}}

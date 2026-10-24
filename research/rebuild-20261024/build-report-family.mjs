@@ -30,7 +30,7 @@ for(const [i,slug] of slugs.entries()){
  }
  }
  html=html.replace(/<footer>[\s\S]*?<\/footer>/,'<footer class="family-footer"><p>다른 보고서</p><nav aria-label="분석 프로젝트 이동">'+slugs.map((s,j)=>'<a href="'+s+'.html"'+(j===i?' aria-current="page"':'')+'>'+['A · 제네시스 패스 BM','B · FC 온라인 라이브서비스','C · 메이플 키우기 운영'][j]+'</a>').join('')+'</nav><div class="family-resources"><a href="index.html">결과물 목록</a><a href="../#experience">개인 게임 경험</a><a href="'+slug+'.pdf" download>보고서 PDF 내려받기</a></div><p>최영빈 · 공개자료 분석 및 모의 과제 · AI가 조사·초안·구현을 보조했습니다.</p></footer>');
- html=html.replace(/<link rel="stylesheet" href="report-family.css[^\"]*">/g,'').replace('</head>','<link rel="stylesheet" href="report-family.css?v=20261024"></head>');
+ html=html.replace(/<link rel="stylesheet" href="report-family.css[^\"]*">/g,'').replace('</head>','<link rel="stylesheet" href="report-family.css?v=20261025mobile"></head>');
  fs.writeFileSync(file,html);
 }
 console.log('Unified report shell. A analysis preserved; B/C original summary archived.');
