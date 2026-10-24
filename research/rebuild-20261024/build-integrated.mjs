@@ -43,3 +43,5 @@ cp.execFileSync('node',[root+'build-report-family.mjs'],{stdio:'inherit'});
 cp.execFileSync('node',[root+'apply-precision.mjs'],{stdio:'inherit'});
 
 cp.execFileSync('node',[root+'final-editor.mjs'],{stdio:'inherit'});
+
+cp.execFileSync('node',[root+'apply-a-depth.mjs'],{stdio:'inherit'});
