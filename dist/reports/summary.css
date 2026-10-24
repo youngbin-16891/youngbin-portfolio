@@ -1,6 +1,37 @@
-header{padding-bottom:12px}header h1{font-size:25px;line-height:1.45;margin:10px 0}header h1 span{display:block;font-size:18px;font-weight:600;color:var(--muted);margin-top:4px}.kicker{margin:8px 0}main{padding-bottom:10px}section h2{font-size:17px;line-height:1.4;margin:20px 0 7px;padding:0;border:0}section p{margin:0;font-size:15px;line-height:1.7}h2 small{font-size:11px;color:var(--muted);margin-left:8px}.summary-facts{list-style:none;margin:0;padding:0;display:grid;gap:8px}.summary-facts li{display:grid;grid-template-columns:85px 1fr;gap:10px;padding:9px 12px;border:1px solid var(--line);border-radius:5px;font-size:14px;line-height:1.6}.summary-facts strong{color:var(--accent)}.summary-facts a{white-space:nowrap;font-size:12px}.main-judgment{padding:12px 16px;margin-top:18px;background:var(--bg);border-left:3px solid var(--accent)}.main-judgment h2{margin-top:0}.main-judgment p{font-weight:700}.summary-limit,footer{font-size:12px;line-height:1.6;color:var(--muted)}.summary-limit{margin:18px 0 10px}.summary-original{font-weight:700;margin:10px 0}footer{padding:12px 0}@media(max-width:640px){header h1{font-size:23px}.summary-facts li{grid-template-columns:1fr;gap:3px}section h2{margin-top:18px}}@media print{header,main,footer{width:100%}header h1{font-size:18pt}header h1 span{font-size:12pt}.kicker{font-size:9pt}section h2{font-size:11pt;margin:12px 0 5px}section p{font-size:9.5pt;line-height:1.55}.summary-facts li{font-size:9pt;padding:6px 8px;line-height:1.5;grid-template-columns:60px 1fr}.summary-facts a{font-size:8pt}.summary-limit,footer{font-size:8pt}.main-judgment{padding:8px 12px;margin-top:12px}section{break-inside:avoid}footer{display:block}.summary-original{font-size:10pt;margin:8px 0}.summary-facts{gap:5px}}
-@media print{header{break-inside:avoid;margin-bottom:12px}main{padding-top:8px}main section:first-child h2{margin-top:8px}header h1 span{line-height:1.6}}
-@media print{header nav{display:none}}
-
-/* Practical mobile QA: screen only; preserve printed reports. */
-@media screen{header nav a,header nav button{min-height:44px;display:inline-flex;align-items:center}.summary-limit,footer,.summary-facts a{font-size:13px}}
+/* Shared report tokens and the screen-only report-family.css provide the shell. */
+.summary-heading{padding:38px 0 28px;border-bottom:1px solid var(--line)}
+.summary-heading .kicker{margin:0 0 18px;font-size:12px;letter-spacing:.1em}
+.summary-game{font-size:14px;color:var(--muted);margin:0 0 8px}
+.summary-heading h1{font-size:clamp(28px,3vw,38px);line-height:1.4;letter-spacing:-1px;margin:0;max-width:1000px;word-break:keep-all}
+.summary-header{padding-bottom:0}
+main{max-width:920px;padding:0 0 36px}
+main>section{margin:32px 0}
+section h2{font-size:22px;line-height:1.5;margin:0 0 14px;padding:0;border:0}
+section p{font-size:16px;line-height:1.85;margin:0}
+h2 small{display:inline-block;font-size:12px;font-weight:400;color:var(--muted);margin-left:8px;letter-spacing:0}
+.summary-facts{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.summary-facts li{display:grid;grid-template-columns:100px minmax(0,1fr);gap:20px;padding:16px 0;border-bottom:1px solid var(--line);font-size:16px;line-height:1.85}
+.summary-facts strong{font-size:13px;color:var(--accent)}
+.summary-facts a{font-size:13px;white-space:nowrap}
+.main-judgment{border-left:3px solid var(--accent);padding:4px 0 4px 22px}
+.main-judgment p{font-weight:650}
+.summary-limit,section p.summary-limit{font-size:13px;line-height:1.8;color:var(--muted);margin-top:12px}
+.summary-original{font-size:14px;font-weight:650;margin:28px 0 0}
+footer{font-size:13px;line-height:1.8;padding:24px 0}
+@media screen and (max-width:700px){
+ .summary-heading{padding:30px 0 24px}.summary-heading h1{font-size:28px}.summary-heading .kicker{line-height:1.8;letter-spacing:.06em}
+ .summary-header .family-topbar{flex-wrap:wrap;gap:0 12px;align-items:center}.summary-header .family-topbar>div{gap:16px;flex-wrap:wrap}
+ main>section{margin:28px 0}section h2{font-size:20px}section p,.summary-facts li{font-size:15px;line-height:1.85}
+ .summary-facts li{grid-template-columns:1fr;gap:6px;padding:14px 0}.main-judgment{padding-left:16px}
+ h2 small{font-size:12px}.summary-original{line-height:1.8}
+}
+/* A4 is a separate reading format; do not shrink the screen to match paper. */
+@media print{
+ header,main,footer{width:100%;max-width:none}.summary-header{border:0;padding:0;margin-bottom:12px}.summary-header nav{display:none!important}
+ .summary-heading{padding:0 0 12px}.summary-heading .kicker{font-size:9pt;line-height:1.5;letter-spacing:.06em;margin:0 0 6px}.summary-game{font-size:10pt;margin:0 0 4px}
+ .summary-heading h1{font-size:18pt;line-height:1.4;letter-spacing:-.5px;margin:0}
+ main{padding:0}main>section{margin:12px 0;break-inside:avoid}section h2{font-size:11pt;line-height:1.4;margin:0 0 5px}section p{font-size:9.5pt;line-height:1.55}
+ h2 small{font-size:8pt;margin-left:6px}.summary-facts{gap:0}.summary-facts li{grid-template-columns:60px minmax(0,1fr);gap:10px;padding:6px 0;font-size:9pt;line-height:1.5}.summary-facts strong{font-size:8pt}.summary-facts a{font-size:8pt}
+ .main-judgment{padding:5px 0 5px 12px}.summary-limit,section p.summary-limit,footer{font-size:8pt;line-height:1.5}.summary-limit,section p.summary-limit{margin:4px 0 0}
+ .summary-original{font-size:9pt;margin:10px 0 0}footer{padding:10px 0;display:block}header{break-inside:avoid}
+}
