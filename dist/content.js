@@ -20,10 +20,10 @@ window.PORTFOLIO = {
       "unit": "HOURS",
       "period": "시즌 3부터 장기간 플레이",
       "detail": "2개 계정 화면 합산 · 이용 주체는 자기 보고",
-      "description": "솔로 랭크 신뢰 하락 이후 대체 모드와 친구 플레이로 잔존한 장기 이용 경험",
+      "description": "미드에서 신드라·애니비아·판테온을 주로 플레이하고, 친구와 함께하는 경기를 즐김",
       "tags": [
-        "랭크 이탈",
-        "모드 리텐션"
+        "미드 플레이",
+        "친구와 듀오"
       ]
     },
     {
@@ -41,24 +41,9 @@ window.PORTFOLIO = {
     }
   ],
   "serviceLenses": [
-    {
-      "game": "League of Legends",
-      "genre": "MOBA",
-      "observation": "솔로 랭크를 중단한 뒤에도 아레나와 친구 플레이를 이어갔습니다.",
-      "question": "경쟁 모드 이탈과 게임 전체 이탈을 어떻게 분리할 것인가"
-    },
-    {
-      "game": "MapleStory",
-      "genre": "MMORPG",
-      "observation": "성장 이벤트 종료 뒤 본 서버로 이동해 짧은 일일 루틴을 계속했습니다.",
-      "question": "이벤트 유입을 종료 후 7·14·30일 행동으로 어떻게 연결할 것인가"
-    },
-    {
-      "game": "Seven Knights Re:BIRTH",
-      "genre": "수집형 RPG",
-      "observation": "가격대별 상품을 반복 구매했지만 후반 성장 정체와 시스템 복잡화 뒤 이용을 중단했습니다.",
-      "question": "첫 구매보다 구매 후 목표 달성과 30일 잔존을 어떻게 볼 것인가"
-    }
+    {"game":"League of Legends","interest":"미드 플레이 · 친구와 듀오","observation":"혼자서는 솔로 랭크를 하지 않고, 친구와 함께 수준이 팽팽한 경기를 즐깁니다."},
+    {"game":"MapleStory","interest":"캐릭터 성장 · 일일 퀘스트 · 몬스터파크","observation":"챌린저스에서 시작해 스카니아로 옮긴 뒤에도 일일 성장 루틴을 이어갔습니다."},
+    {"game":"FC Online","interest":"이벤트 보상 · 선수 구매 · 스쿼드 구성","observation":"보상과 선수단 구성에는 관심이 있지만 경기는 간헐적으로 플레이했습니다."}
   ],
   "experiencedGames": [
     {
@@ -159,8 +144,8 @@ window.PORTFOLIO = {
     {
       "name": "Brown Dust 2",
       "genre": "턴제 RPG",
-      "duration": "약 1개월째",
-      "note": "현재 플레이 중",
+      "duration": "경험 제공 당시 약 1개월",
+      "note": "경험 제공 당시 플레이 중",
       "description": "지속적인 무료 모집과 여러 종류의 일일 콘텐츠를 통해 수집과 플레이를 이어가는 중"
     }
   ],
