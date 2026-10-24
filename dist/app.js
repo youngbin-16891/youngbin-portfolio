@@ -28,7 +28,7 @@ function renderExperienceGroup(featuredSelector, listSelector, games) {
 renderExperienceGroup('#experienced-featured', '#pc-games', data.experiencedGames);
 renderExperienceGroup('#mobile-featured', '#mobile-games', data.mobileGames);
 document.querySelector('#past-mobile-games').innerHTML = tags(data.pastMobileGames);
-document.querySelector('#interest-tags').innerHTML = tags(data.interests);
+
 
 const statusClasses = { Observation: 'observation', Hypothesis: 'hypothesis', 'Partial Evidence': 'observation', 'Analysis in Progress': 'progress', 'Data to be Added': 'pending', 'Verified Result': 'verified', 'Case Study Complete': 'verified', 'Operations Plan Complete': 'verified', 'Public Evidence Audit': 'verified', 'Decision Complete': 'verified', 'Personal Journey Study': 'observation', 'Project Preparing': 'pending' };
 const statusLabels = { Observation: '개인 관찰', Hypothesis: '미검증 가설', 'Partial Evidence': '화면 확인 · 이용 주체 자기 보고', 'Analysis in Progress': '분석 진행 중', 'Data to be Added': '자료 준비 중', 'Verified Result': '자료 확인', 'Case Study Complete': '사례 분석 완료', 'Operations Plan Complete': '운영안 설계 완료', 'Public Evidence Audit': '공개자료 검토', 'Decision Complete': '판단·검증 요구서 완료', 'Personal Journey Study': '1인 사용자 여정', 'Project Preparing': '프로젝트 준비 중' };
@@ -152,17 +152,6 @@ dialog.addEventListener('close', () => {
   document.body.classList.remove('dialog-open');
   if (lastCaseTrigger?.isConnected) lastCaseTrigger.focus();
 });
-
-function renderProcess(selector, steps) {
-  document.querySelector(selector).innerHTML = steps.map((step, i) => `<article class="process-step"><span class="eyebrow">${String(i + 1).padStart(2, '0')}</span><h3>${escapeHTML(step.title)}</h3><p>${escapeHTML(step.text)}</p></article>`).join('');
-}
-renderProcess('#service-process', data.serviceSteps);
-renderProcess('#ai-process', data.aiSteps);
-const primaryTopics = data.dataAnalysis.topics.slice(0, 4);
-const additionalTopics = data.dataAnalysis.topics.slice(4);
-document.querySelector('#data-topics').innerHTML = `${tags(primaryTopics)}${additionalTopics.length ? `<details class="topic-more"><summary>근거 항목 ${additionalTopics.length}개 더 보기</summary><div class="tags">${tags(additionalTopics)}</div></details>` : ''}`;
-document.querySelector('#data-evidence').innerHTML = data.dataAnalysis.images.map((item) => assetURL(item.src) ? `<figure><img src="${escapeHTML(assetURL(item.src))}" alt="${escapeHTML(item.alt)}" loading="lazy"><figcaption>${escapeHTML(item.caption || '')}</figcaption></figure>` : '').join('') + artifactLinks(data.dataAnalysis.documents);
-document.querySelector('#skills-grid').innerHTML = data.skills.map((skill, index) => `<article class="skill-card"><span class="skill-number">0${index + 1}</span><h3>${escapeHTML(skill.title)}</h3><p>${escapeHTML(skill.subtitle)}</p><div class="tags">${tags(skill.items)}</div></article>`).join('');
 
 document.querySelector('#contact-links').innerHTML = data.contacts.map((contact) => {
   const safeURL = /^(https:\/\/|mailto:|tel:)/i.test(contact.url) ? contact.url : '';

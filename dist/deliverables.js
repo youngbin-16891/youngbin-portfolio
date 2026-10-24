@@ -34,6 +34,7 @@ deliverables[2].title='계정 제한과 자발적 이탈을 구분한 환불 대
 deliverables[2].takeaways=[['핵심 질문','환불 이후 미접속을 모두 자발적 이탈로 볼 수 있을까?'],['근거 · 공식·공개 반응','공식 FAQ는 신청 즉시 계정 이용 제한을 안내한다. 공개 댓글 15개 검토·9개 포함.'],['핵심 판단','접속 불가능한 계정과 자발적으로 멈춘 계정을 나눠야 한다. 처리 완료만으로 신뢰 회복을 판단하지 않는다.']];
 deliverables[2].output='사건 타임라인 · VOC 분류표 · 모의 공지·FAQ·CS 기준 · 계정 상태별 측정 계획';
 
+const cardFindings=["개인 사례: 기본 패스는 시간 단축을 위해 샀지만, PLUS는 후속 보스 수행 부담과 큐브 결과의 불확실성 때문에 구매하지 않았습니다.","공식 이벤트의 접속 보상과 경기 미션을 구분하고, 실제 인정 규칙 확인 뒤 첫 경기 준비 안내를 시험하는 안을 제안했습니다.","공식 FAQ의 신청 즉시 계정 제한을 근거로, 제한에 따른 미접속과 자발적 이탈 위험을 나눠 보는 대응안을 작성했습니다."];
 const cards = document.querySelector('#case-studies');
 if (cards) {
   cards.innerHTML = '<div class="deliverable-grid">'+deliverables.map((d,i)=>`
@@ -41,14 +42,11 @@ if (cards) {
  <div class="deliverable-role">${d.role}<span>${d.status}</span></div>
  <div class="review-card-layout"><figure class="project-preview"><a href="${d.href}" aria-label="${d.game} 상세 보고서"><img src="${previews[i].src}" alt="${previews[i].alt}" loading="lazy"></a><figcaption>${previews[i].caption}</figcaption></figure>
  <div class="review-card-copy"><p class="eyebrow">${d.game}</p><h3 id="project-title-${i+1}">${d.title}</h3>
- <dl class="project-takeaways">${d.takeaways.map(t=>`<div><dt>${t[0]}</dt><dd>${t[1]}</dd></div>`).join('')}</dl>
+ <p class="project-finding">${cardFindings[i]}</p>
  <dl class="project-output"><dt>실제 작성 문서</dt><dd>${d.output}</dd></dl>
- <div class="report-entry-links"><a class="button secondary" href="${d.href.replace('.html','-summary.html')}">1페이지 요약 ↗</a><a class="text-link" href="${d.href}">상세 보고서 ↗</a></div>
- <details class="project-scope"><summary>제안과 확인 범위</summary><p>${projectNextSteps[i]}</p><p>${d.note}</p>${d.conditions?d.conditions.map(c=>`<p><b>${c[0]}</b> · ${c[1]}</p>`).join(''):''}</details>
- </div></div></article>`).join('')+'</div><details class="review-note"><summary>이전 분석 자료와 출처 감사 보기</summary><p>기존 자료는 보존했습니다. 현재 제출용 결과물은 위 세 보고서입니다.</p><a href="reports/youngbin-work-samples-review.pdf">이전 PDF 보관본</a> · <a href="reports/audit.html">기존 자료 감사</a> · <a href="reports/source-ledger.html">출처·확인 한계</a></details>';
+ <div class="report-entry-links"><a class="button secondary" href="${d.href}">보고서 보기 ↗</a><a class="text-link" href="${d.href.replace('.html','-summary.html')}">1페이지 요약 ↗</a></div>
+ 
+ </div></div></article>`).join('')+'</div>';
 
 }
-
-// Current work samples first; historical research remains accessible.
-const oldTopics=document.querySelector('#data-topics');if(oldTopics){const previous=oldTopics.innerHTML;oldTopics.innerHTML='<div class="current-evidence"><a href="reports/genesis-pass.html#analysis">A · 공식 혜택과 개인 구매 판단 비교</a><a href="reports/fc-live-event.html#measurement">B · 수령과 경기 참여의 측정 기준 구분</a><a href="reports/idle-operations.html#measurement">C · 계정 상태별 접속 변화 해석</a></div><details><summary>이전 조사 주제 보기</summary>'+previous+'</details>';}
 
