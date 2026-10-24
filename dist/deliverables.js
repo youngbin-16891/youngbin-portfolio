@@ -45,8 +45,7 @@ if (cards) {
  <p class="project-finding">${cardFindings[i]}</p>
  <dl class="project-output"><dt>실제 작성 문서</dt><dd>${d.output}</dd></dl>
  <div class="report-entry-links"><a class="button secondary" href="${d.href}">보고서 보기 ↗</a><a class="text-link" href="${d.href.replace('.html','-summary.html')}">1페이지 요약 ↗</a></div>
- 
+
  </div></div></article>`).join('')+'</div>';
 
 }
-
