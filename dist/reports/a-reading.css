@@ -13,3 +13,5 @@ main>section.product-opening{display:block;margin-top:38px}.product-opening .her
 @media screen and (min-width:701px){.product-panel figure>a{aspect-ratio:auto;height:310px}.product-panel img{width:100%;height:100%;object-fit:contain}}
 
 @media print{.a-print-overlap{display:none!important}}
+
+@media screen{#action .proposal dl>div{grid-template-columns:76px minmax(0,1fr)}#action .proposal dt{white-space:nowrap}}
