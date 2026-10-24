@@ -11,3 +11,10 @@ Scope: A report UI only. B/C, Experience, About and source analysis unchanged.
 - Internal links/assets, anchors, image decode, print detail opening/restoration passed.
 - PDF regenerated: 11 A4 pages. First page and all-page contact sheet visually reviewed; no observed overlapping or clipped text. Detailed tables retained.
 - Verification limited to UI and preservation; no new product claims or analysis added.
+
+## Product comparison follow-up
+- Added supplied PLUS screenshot byte-for-byte; no crop or file resampling.
+- Basic/PLUS side-by-side desktop and stacked mobile, preserved aspect ratio via contain.
+- Price, eligibility, benefits and personal purchase status visible per product; ordinary PLUS missions distinguished from paid premium rewards.
+- Existing six analysis sections exact preservation PASS; no other project changed.
+- 390/1280 light/dark no page overflow; screenshots inspected, PDF first page inspected. Source retained.
