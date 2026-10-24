@@ -81,3 +81,4 @@
 #experience .experience-observation>div+div{border:0;padding:0}
 #experience .experience-observation dd,#experience .experience-observation>div:last-child dd{font-size:13px;font-weight:400}
 @media(max-width:760px){#projects .project-next{grid-template-columns:1fr}#experience .service-lenses article{grid-template-columns:1fr;gap:12px}#experience .experience-observation{grid-template-columns:1fr;gap:10px}}
+.report-entry-links{display:flex;align-items:center;flex-wrap:wrap;gap:12px 18px;margin-top:16px}.report-entry-links .text-link{font-size:13px}

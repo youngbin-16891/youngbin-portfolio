@@ -21,7 +21,7 @@ const take=(keys)=>keys.map(k=>{const s=sections.find(x=>x.key===k);if(!s)throw 
 const section=(id,title,content)=>`<section id="${id}" class="report-section"><h2>${title}</h2>${content}</section>`;
 const summary=`<section id="summary" class="report-summary" aria-label="1분 요약"><h2>1분 요약 <small>${c.role}</small></h2><dl>${c.summary.map(([a,b])=>`<div><dt>${a}</dt><dd>${b}</dd></div>`).join('')}</dl></section>`;
 const nav='<nav class="reading-nav" aria-label="보고서 목차">'+[['summary','1분 요약'],['problem','문제'],['evidence','근거'],['analysis','분석'],['action','제안'],['measurement','성과 확인'],['appendix','실무 부록'],['sources','출처·한계']].map(([a,b])=>`<a href="#${a}">${b}</a>`).join('')+'</nav>';
-let out=summary+nav+section('problem','문제 정의',`<p>${c.problem}</p>`)+section('evidence','핵심 근거',take(c.groups[0]))+section('analysis','분석 결과',c.visual+take(c.groups[1]))+section('action','실무 제안',c.second+take(c.groups[2]))+section('measurement','성과 확인',take(c.groups[3]))+section('appendix','상세 실무 문서',`<p>상품·보상·운영 규칙의 전체 내용입니다. 인쇄할 때는 모두 펼쳐집니다.</p><details><summary>상세 표와 실무 문서 펼치기</summary>${take(c.groups[4])}</details>`)+section('sources','출처와 한계',take(c.groups[5]));
+let out=summary+nav+section('problem','문제 정의',`<p>${c.problem}</p>`)+section('evidence','핵심 근거',take(c.groups[0]))+section('analysis','분석 결과',c.visual+take(c.groups[1]))+section('action','실무 제안',c.second+take(c.groups[2]))+section('measurement','성과 확인',take(c.groups[3]))+section('appendix','상세 실무 문서',`<p>${c.file==='idle-operations'?'환불 정책·운영 대응·CS 기준':'상품·보상·운영 규칙'}의 전체 내용입니다. 인쇄할 때는 모두 펼쳐집니다.</p><details><summary>상세 표와 실무 문서 펼치기</summary>${take(c.groups[4])}</details>`)+section('sources','출처와 한계',take(c.groups[5]));
 if(c.file!=='genesis-pass')out=out.replace(/<p>[^<]*지원자가[^<]*면접[^<]*<\/p>/g,'');
 // Original source files preserve full prose and research order, including removed learning notes.
 out=out.replace(/분석 원문 내려받기 \(Markdown\)/g,'전체 분석 원문 내려받기 (Markdown)').replace(/표의 단위·시나리오·측정 한계를 함께 확인할 수 있습니다\./g,'원문은 조사 당시 순서이며 웹에서는 빠르게 읽도록 재배치했습니다.');
@@ -30,6 +30,7 @@ h=h.replace(/<main id="main">[\s\S]*?<\/main>/,'<main id="main">'+out+'</main>')
 h=h.replace(/<link rel="stylesheet" href="integration.css[^" ]*">/g,'').replace('</head>','<link rel="stylesheet" href="integration.css?v=20261024">\n</head>');
 // B evidence captures were inserted before the next section: keep them with core evidence.
 h=h.replaceAll('loading="lazy"','loading="eager"').replace('src="report.js"','src="report.js?v=20261024integrated"');
+h=h.replace(/<a class="summary-entry"[^>]*>[\s\S]*?<\/a>/g,'').replace('</nav>','<a class="summary-entry" href="'+c.file+'-summary.html">1페이지 요약 ↗</a></nav>');
 fs.writeFileSync(p,h);
 }
 console.log('A/B/C integrated, original tables and sources retained.');

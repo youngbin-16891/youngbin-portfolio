@@ -10,7 +10,7 @@ const deliverables = [
    output:'조건·보상표 · 행동 흐름 · 개선 기획서 · 지급·예외 처리 · 공지 · 성과 측정',note:'N=1은 본인 1명의 경험 · 시세 인플레이션·이탈 패턴 관측 없음 · 서버 판정·효과 미검증'},
   {role:'C · 게임 운영',game:'메이플 키우기 · 운영 대응',title:'환불 이슈 발생 시 유저 신뢰 및 이탈 위험 대응',status:'공개 사건 기반 모의 대응',href:'reports/idle-operations.html',
    takeaways:[['핵심 문제','환불 처리와 계정 영향 안내를 어떻게 일치시키고, 신뢰·이탈 위험을 추적할 것인가?'],['확인한 사실','공식 환불 공지·FAQ와 댓글 15개를 확인했습니다. FAQ의 조건 설명 차이를 별도 검토했습니다.'],['해석','신청에 따른 이용 제한과 자발적 이탈을 나눠 봐야 합니다. 환불 완료가 신뢰 회복의 증거는 아닙니다.']],
-   conditions:[['실행 조건','대상·계정 영향·처리 절차가 승인되고 안내가 일치하면 공지·FAQ를 제공합니다. 진행 중 피해는 조사·보호 조치를 먼저 요청합니다.'],['보류 기준','대상·정책이 미확정이면 보상과 복구를 약속하지 않습니다. 잔존 근거 없이 신뢰 회복 성과나 LTV 상승을 주장하지 않습니다.']],
+   conditions:[['실행 조건','대상·계정 영향·처리 절차가 승인되고 안내가 일치하면 공지·FAQ를 제공합니다. 진행 중 피해는 조사·보호 조치를 먼저 요청합니다.'],['보류 기준','대상·정책이 미확정이면 보상과 복구를 약속하지 않습니다. 잔존 근거 없이 신뢰 회복이나 성과 개선을 주장하지 않습니다.']],
    output:'사건 타임라인 · VOC · 대응 절차 · 공지·FAQ·CS · 환불 검토 · 이탈 위험 측정',note:'공식 영문 정책의 범위·한계 표시 · 관련 댓글 9개는 동일 작성자 답글 포함 · 실제 업무 성과 아님'}
 ];
 const projectNextSteps = [
@@ -29,6 +29,6 @@ if (cards) {
       <dl class="project-takeaways">${d.takeaways.map(t=>`<div><dt>${t[0]}</dt><dd>${t[1]}</dd></div>`).join('')}</dl>
       ${d.conditions?`<div class="project-conditions">${d.conditions.map((c,j)=>`<section class="project-condition ${j?'hold':'execute'}" aria-labelledby="project-condition-${i}-${j}"><h4 id="project-condition-${i}-${j}">${c[0]}</h4><p>${c[1]}</p></section>`).join('')}</div>`:''}
       <dl class="project-output"><dt>작성한 결과물</dt><dd>${d.output}</dd></dl>
-      <dl class="project-next"><dt>제안·후속 검증</dt><dd>${projectNextSteps[i]}</dd></dl><small>${d.note}</small><a class="button secondary" href="${d.href}">분석·실무 문서 보기 ↗</a>
+      <dl class="project-next"><dt>제안·후속 검증</dt><dd>${projectNextSteps[i]}</dd></dl><small>${d.note}</small><div class="report-entry-links"><a class="button secondary" href="${d.href.replace('.html','-summary.html')}">1페이지 요약 ↗</a><a class="text-link" href="${d.href}">전체 보고서 ↗</a></div>
     </article>`).join('')+'</div><p class="review-note">공개자료 분석·모의 실무 문서입니다. 실제 운영 성과와 구분해 읽을 수 있도록 출처와 측정 계획을 함께 제시했습니다. <a href="reports/youngbin-work-samples-review.pdf">이전 PDF 보관본</a> · <a href="reports/audit.html">기존 자료 감사</a> · <a href="reports/source-ledger.html">출처·확인 한계</a></p>';
 }
