@@ -39,3 +39,5 @@ console.log('A/B/C integrated, original tables and sources retained.');
 cp.execFileSync('node',[root+'build-a-reading.mjs'],{stdio:'inherit'});
 cp.execFileSync('node',[root+'build-service-visuals.mjs'],{stdio:'inherit'});
 cp.execFileSync('node',[root+'build-report-family.mjs'],{stdio:'inherit'});
+
+cp.execFileSync('node',[root+'apply-precision.mjs'],{stdio:'inherit'});
