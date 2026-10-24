@@ -2,15 +2,26 @@ const data = window.PORTFOLIO;
 const escapeHTML = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const tags = (items) => items.map((item) => `<span class="tag">${escapeHTML(item)}</span>`).join('');
 
+// Elapsed calendar time from a dated self-report, not measured play hours.
+function experienceDuration(game, now = new Date()) {
+  const estimate = game.durationEstimate;
+  if (!estimate?.ongoing || !Number.isFinite(estimate.weeks)) return game.duration;
+  const koreaDate = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now);
+  const elapsedDays = (Date.parse(`${koreaDate}T00:00:00Z`) - Date.parse(`${estimate.asOf}T00:00:00Z`)) / 86400000;
+  if (!Number.isFinite(elapsedDays)) return game.duration;
+  const weeks = estimate.weeks + Math.floor(Math.max(0, elapsedDays) / 7);
+  return `약 ${weeks}주 · 플레이 중`;
+}
+
 document.querySelector('#core-games').innerHTML = data.coreGames.map((game, index) => `<article class="core-card"><div class="card-top"><span class="eyebrow">${escapeHTML(game.genre)}</span><span class="card-index">0${index + 1}</span></div><h4>${escapeHTML(game.name)}</h4><div class="metric">${escapeHTML(game.metric)}<span>${escapeHTML(game.unit)}</span></div><p class="period">${escapeHTML(game.period)}</p><p class="game-detail">${escapeHTML(game.detail)}</p><p class="game-description">${escapeHTML(game.description)}</p><div class="tags">${tags(game.tags)}</div></article>`).join('');
 document.querySelector('#service-lenses').innerHTML = data.serviceLenses.map((item) => `<article><h4>${escapeHTML(item.game)}</h4><dl class="experience-observation"><div><dt>관심 콘텐츠</dt><dd>${escapeHTML(item.interest)}</dd></div><div><dt>개인 관찰</dt><dd>${escapeHTML(item.observation)}</dd></div></dl></article>`).join('');
 
 function renderGames(selector, games) {
-  document.querySelector(selector).innerHTML = games.map((game) => `<article class="game-row${game.description ? ' has-description' : ''}"><div><h4>${escapeHTML(game.name)}</h4><p>${escapeHTML(game.genre)}${game.note ? ` <span class="playing">· ${escapeHTML(game.note)}</span>` : ''}</p></div><span class="duration">${escapeHTML(game.duration)}</span>${game.description ? `<p class="experience-note">${escapeHTML(game.description)}</p>` : ''}${game.caseStudy ? `<button class="case-crosslink" type="button" data-open-case="${escapeHTML(game.caseStudy)}">관련 분석 프로젝트 보기 ↗</button>` : ''}</article>`).join('');
+  document.querySelector(selector).innerHTML = games.map((game) => `<article class="game-row${game.description ? ' has-description' : ''}"><div><h4>${escapeHTML(game.name)}</h4><p>${escapeHTML(game.genre)}${game.note ? ` <span class="playing">· ${escapeHTML(game.note)}</span>` : ''}</p></div><span class="duration">${escapeHTML(experienceDuration(game))}</span>${game.description ? `<p class="experience-note">${escapeHTML(game.description)}</p>` : ''}${game.caseStudy ? `<button class="case-crosslink" type="button" data-open-case="${escapeHTML(game.caseStudy)}">관련 분석 프로젝트 보기 ↗</button>` : ''}</article>`).join('');
 }
 
 function renderExperienceGroup(featuredSelector, listSelector, games) {
-  document.querySelector(featuredSelector).innerHTML = games.filter((game) => game.featured).map((game) => `<article class="experienced-card"><p>${escapeHTML(game.genre)}</p><h4>${escapeHTML(game.name)}</h4><span class="experience-duration">${escapeHTML(game.duration)}</span>${game.note ? `<p class="playing">${escapeHTML(game.note)}</p>` : ''}${game.description ? `<p class="experience-note">${escapeHTML(game.description)}</p>` : ''}</article>`).join('');
+  document.querySelector(featuredSelector).innerHTML = games.filter((game) => game.featured).map((game) => `<article class="experienced-card"><p>${escapeHTML(game.genre)}</p><h4>${escapeHTML(game.name)}</h4><span class="experience-duration">${escapeHTML(experienceDuration(game))}</span>${game.note ? `<p class="playing">${escapeHTML(game.note)}</p>` : ''}${game.description ? `<p class="experience-note">${escapeHTML(game.description)}</p>` : ''}</article>`).join('');
   renderGames(listSelector, games.filter((game) => !game.featured));
 }
 

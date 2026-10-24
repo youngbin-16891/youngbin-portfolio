@@ -144,8 +144,9 @@ window.PORTFOLIO = {
     {
       "name": "Brown Dust 2",
       "genre": "턴제 RPG",
-      "duration": "꾸준히 플레이 중",
-      "note": "2026.10.24 본인 확인",
+      "duration": "약 5주 · 플레이 중",
+      "durationEstimate": { "asOf": "2026-10-24", "weeks": 5, "ongoing": true },
+      "note": "시작 시점 추정 · 플레이 확인 2026.10.24",
       "description": "지속적인 무료 모집과 여러 종류의 일일 콘텐츠를 통해 수집과 플레이를 이어가는 중"
     }
   ],
