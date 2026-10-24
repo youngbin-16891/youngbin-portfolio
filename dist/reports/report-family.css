@@ -6,3 +6,9 @@ header,main,footer{width:min(100% - 64px,1120px);max-width:1120px}.report-header
 @media(max-width:700px){.report-header .family-topbar{padding:16px 0}.family-opening{display:flex;flex-direction:column}.family-opening>.eyebrow{order:0}.family-opening>h1{order:1}.family-opening>.family-intro{order:2;margin-bottom:12px}.family-opening>.family-judgment{order:3;margin:0 0 24px;padding-top:12px}.family-opening>.family-overview{order:4}}
 @media print{.report-download{display:none!important}.opening-conclusion{break-inside:avoid}}
 @media print{.original-overview{display:none!important}#sources{font-size:9pt;line-height:1.5}#sources p{margin:6px 0}}
+
+/* Two-column editorial summaries fit the viewport; full technical tables stay scrollable. */
+.core-table table{min-width:0;table-layout:fixed}.core-table th:first-child,.core-table td:first-child{width:30%}.core-table th,.core-table td{overflow-wrap:anywhere;word-break:normal}
+@media(max-width:700px){.core-table th,.core-table td{padding:10px;font-size:14px;line-height:1.7}}
+
+@media screen and (max-width:700px){#action h3{word-break:keep-all}#action h3 small{display:block;font-size:12px;line-height:1.6;font-weight:500;color:var(--muted);margin-top:5px}}
