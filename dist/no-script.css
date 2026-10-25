@@ -1,0 +1,8 @@
+/* JavaScript-free navigation only; the ordinary interactive design is unchanged. */
+@media screen and (max-width:900px){
+ .header{height:auto;position:static}
+ .nav-shell{flex-wrap:wrap;gap:8px;padding-block:12px}
+ .menu-toggle{display:none}
+ #navigation{display:flex;position:static;flex-wrap:wrap;width:100%;padding:0;background:transparent;border:0}
+ #navigation a{min-height:44px;flex:1;justify-content:center;padding:8px;font-size:12px}
+}

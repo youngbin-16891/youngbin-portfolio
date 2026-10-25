@@ -45,3 +45,5 @@ cp.execFileSync('node',[root+'apply-precision.mjs'],{stdio:'inherit'});
 cp.execFileSync('node',[root+'final-editor.mjs'],{stdio:'inherit'});
 
 cp.execFileSync('node',[root+'apply-a-depth.mjs'],{stdio:'inherit'});
+
+cp.execFileSync('node',[root+'prerender-primary-content.mjs'],{stdio:'inherit'});
