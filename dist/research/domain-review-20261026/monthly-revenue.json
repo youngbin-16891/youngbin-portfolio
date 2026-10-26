@@ -1,0 +1,95 @@
+{
+  "checked_at": "2026-10-26",
+  "scope": "대한민국 모바일 앱마켓 월간 인앱 추정 매출. 금액은 IGAWorks 모바일인덱스 원문으로 확인한 값만 사용. PC·웹 등 외부 결제 포함 여부와 환불 소급 조정 방식은 미확인.",
+  "unit": "억원",
+  "rows": [
+    {
+      "month": "2025-11",
+      "revenue": null,
+      "rank": 3,
+      "source": "https://www.eugenefn.com/common/files/amail/20251208_B4530_uihoon0607_395.pdf",
+      "published": "2025-12-08",
+      "basis": "모바일인덱스 재인용·통합 매출 순위만 확인. 출시 11/6, 금액 미확보"
+    },
+    {
+      "month": "2025-12",
+      "revenue": null,
+      "rank": 1,
+      "source": "https://www.eugenefn.com/common/files/amail/20260107_B4530_uihoon0607_397.pdf",
+      "published": "2026-01-07",
+      "basis": "모바일인덱스 재인용·통합 매출 순위만 확인. 금액 미확보"
+    },
+    {
+      "month": "2026-01",
+      "revenue": 439,
+      "rank": 1,
+      "source": "https://insight-report.mobileindex.com/post/mobilegame-chart-2602",
+      "published": "2026-02-10",
+      "basis": "원문 본문·국내 3사 월간 추정 매출. 공지 1/28 포함 월"
+    },
+    {
+      "month": "2026-02",
+      "revenue": 391,
+      "rank": 1,
+      "source": "https://insight-report.mobileindex.com/post/mobilegame-chart-2603",
+      "published": "2026-03-05",
+      "basis": "원문 본문·국내 3사 월간 추정 매출. 신청 2/5~15 포함 월"
+    },
+    {
+      "month": "2026-03",
+      "revenue": 452,
+      "rank": 1,
+      "source": "https://insight-report.mobileindex.com/post/mobilegame-chart-2604",
+      "published": "2026-04-03",
+      "basis": "원문 본문·국내 3사 월간 추정 매출"
+    },
+    {
+      "month": "2026-04",
+      "revenue": 256,
+      "rank": 3,
+      "source": "https://insight-report.mobileindex.com/post/mobilegame-chart-2605",
+      "published": "2026-05-06",
+      "basis": "원문 본문·국내 3사 월간 추정 매출"
+    },
+    {
+      "month": "2026-05",
+      "revenue": 285,
+      "rank": 2,
+      "source": "https://insight-report.mobileindex.com/post/mobilegame-chart-2606",
+      "published": "2026-06-05",
+      "basis": "원문 본문·국내 3사 월간 추정 매출"
+    },
+    {
+      "month": "2026-06",
+      "revenue": null,
+      "rank": null,
+      "source": null,
+      "published": null,
+      "basis": "동일 기준의 월간 금액 원문 미확보. 0 또는 앞뒤 값으로 보간하지 않음"
+    },
+    {
+      "month": "2026-07",
+      "revenue": 138,
+      "rank": 7,
+      "source": "https://insight-report.mobileindex.com/post/mobilegame-chart-2608",
+      "published": "2026-08-05",
+      "basis": "원문 매출 TOP10 이미지 직접 확대 확인: 7월 3사 합산, 메이플 키우기138억원·7위"
+    },
+    {
+      "month": "2026-08",
+      "revenue": 221,
+      "rank": 3,
+      "source": "https://insight-report.mobileindex.com/post/mobilegame-chart-2609",
+      "published": "2026-09-04",
+      "basis": "매출 절 본문은8월·221억원. 서두는9월이라고 잘못 적혀 있어 매출 절 기준으로 분류"
+    },
+    {
+      "month": "2026-09",
+      "revenue": 176,
+      "rank": 5,
+      "source": "https://insight-report.mobileindex.com/post/mobilegame-chart-2610",
+      "published": "2026-10-08",
+      "basis": "원문 본문·국내 구글플레이+애플 앱스토어+원스토어 합산"
+    }
+  ]
+}
