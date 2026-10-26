@@ -44,6 +44,8 @@ if (cards) {
  <p class="project-finding">${cardFindings[i]}</p>
  <dl class="project-output"><dt>실제 작성 문서</dt><dd>${d.output}</dd></dl>
  <div class="report-entry-links"><a class="button secondary" href="${d.href}">보고서 보기 ↗</a><a class="text-link" href="${d.href.replace('.html','-summary.html')}">1페이지 요약 ↗</a></div>
+${i===2?`<aside class="supplementary-work" aria-label="메이플 키우기 추가 게임 분석"><a class="supplementary-preview" href="reports/idle-growth-study.html"><img src="reports/evidence/idle-growth-study/slide-09.png" alt="성장 지원의 기존 조건과 모의 제안을 비교한 실제 슬라이드" loading="lazy" width="1280" height="720"></a><div><p class="supplementary-label">추가 결과물 · 게임 구조·성장 지원</p><a class="supplementary-title" href="reports/idle-growth-study.html">성장 지원 게임 분석 · 13p ↗</a><p>개인 재육성 경험과 공식 이벤트 조건을 비교하고, 참여 대상 변경안·화면 예시·검증 계획을 작성했습니다.</p></div></aside>`:''}
+
 
  </div></div></article>`).join('')+'</div>';
 
