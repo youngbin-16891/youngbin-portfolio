@@ -9,6 +9,7 @@ for(const width of [320,390,768,1440]){
  await page.setViewportSize({width,height:width<768?844:1000});
  for(const slug of slugs)for(const tail of ['', '-summary']){
   const response=await page.goto(base+'reports/'+slug+tail+'.html',{waitUntil:'networkidle'});
+  await page.evaluate(async()=>{await Promise.all([...document.images].map(async img=>{img.loading='eager';try{await img.decode();}catch{}}));});
   const state=await page.evaluate(()=>({title:document.title,h1:document.querySelector('h1')?.textContent,overflow:document.documentElement.scrollWidth>innerWidth+1,images:[...document.images].filter(x=>!x.complete||!x.naturalWidth).map(x=>x.src),ids:[...document.querySelectorAll('[id]')].map(x=>x.id)}));
   const key=slug+tail+'-'+width;await page.screenshot({path:out+'/'+key+'.png',fullPage:true});
   if(slug==='idle-operations'&&!tail){await page.locator('#monthly-revenue').screenshot({path:out+'/monthly-'+width+'.png'});}
