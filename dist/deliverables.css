@@ -104,3 +104,6 @@
 
 /* Growth analysis supplement */
 #projects .supplementary-work{display:grid;grid-template-columns:156px minmax(0,1fr);gap:18px;align-items:center;margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}#projects .supplementary-preview img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:4px}#projects .supplementary-label{font-size:11px;color:var(--muted);margin:0 0 4px}#projects .supplementary-title{display:inline-flex;align-items:center;min-height:44px;font-size:17px;font-weight:700;color:var(--accent)}#projects .supplementary-work div>p:last-child{font-size:13px;line-height:1.7;margin:6px 0 0;color:var(--muted)}@media(max-width:560px){#projects .supplementary-work{grid-template-columns:1fr;gap:12px}#projects .supplementary-preview{max-width:280px}}
+
+/* Preserve the full existing account-state deliverable in C preview. */
+#projects .project-preview img.output-preview{width:100%;height:auto;max-height:none;object-fit:contain;aspect-ratio:auto}
