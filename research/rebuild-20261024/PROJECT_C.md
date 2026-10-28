@@ -185,7 +185,7 @@ CS 기록 항목: 사건·접수 ID, 게임 계정 식별자, 지역·마켓, �
 - S9 공식 Q1 2026 실적 서한, 2026.05.14, p.9. 1분기 매출 영향 약67억엔·3월 환불 완료라는 회사 설명. https://pdf.irpocket.com/C3659/WUpy/ecSw/IVuJ.pdf
 - E2 보존: 영문 신청 공지·지역 비교용. 한국 정책의 주근거 아님. https://forum.nexon.com/maplestoryidle/board_view?board=6653&thread=3368869
 - E3 보존: 영문 FAQ·지역/버전 비교용. 한국 정책의 주근거 아님. https://forum.nexon.com/maplestoryidle/board_view?board=6679&thread=3366800
-- E6 보존: 영문 최초 환불 발표·지역 비교용. https://forum.nexon.com/maplestoryidle-kr/board_view?board=6633&thread=3360480
+- E6 보존: 영문 최초 환불 발표·지역 비교용. https://forum.nexon.com/maplestoryidle/board_view?board=6653&thread=3360525
 - S10 공식 오프라인 보상 FAQ. 현행 시간 한도를 과거 모든 이벤트에 적용하지 않음. https://forum.nexon.com/maplestoryidle-kr/board_view?board=6730&thread=3210548
 
 VOC 포함·제외 기록: ../research/rebuild-20261024/voc-cases.csv

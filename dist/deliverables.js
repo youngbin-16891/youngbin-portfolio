@@ -22,7 +22,7 @@ const projectNextSteps = [
 const previews=[
  {src:'assets/maplestory/genesis-pass-user-guide.png',alt:'제네시스 패스 실제 상품 안내',caption:'지원자 제공 상품 이미지'},
  {src:'reports/evidence/fc-event-opening-20261024.png',alt:'공식 FC KICK-OFF 신규·복귀 이벤트 화면',caption:'공식 이벤트 화면 · 2026.10.24 열람'},
- {src:'reports/evidence/idle-account-state-preview.png',alt:'기존 C 결과물: 미접속 관찰, 계정 제한 상태, 접속 가능 상태, 추가 확인을 구분한 모의 측정안',caption:'작성 결과물 · 계정 상태별 해석 · 모의 측정안'}
+ {src:'reports/evidence/idle-account-state-preview.png?v=20261028final',alt:'기존 C 결과물: 미접속 관찰, 계정 제한 상태, 접속 가능 상태, 추가 확인을 구분한 모의 측정안',caption:'작성 결과물 · 계정 상태별 해석 · 모의 측정안'}
 ];
 deliverables[0].title='기본 패스는 구매하고, PLUS는 구매하지 않은 이유';
 deliverables[0].takeaways=[['핵심 질문','성장 가속과 해방 후 추가 보상은 같은 구매 판단일까?'],['근거 · 공식·개인','기본 패스 30,000캐시·흔적 3배. 본인은 기본 패스를 구매하고 PLUS 프리미엄 티켓은 미구매.'],['핵심 판단','해방 후에도 플레이는 유지했지만, 추가 보스 공략의 스펙·시간 부담과 큐브 결과를 고려해 PLUS는 사지 않았다.']];
