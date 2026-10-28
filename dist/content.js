@@ -20,9 +20,9 @@ window.PORTFOLIO = {
       "unit": "HOURS",
       "period": "시즌 3부터 장기간 플레이",
       "detail": "2개 계정 화면 합산 · 이용 주체는 자기 보고",
-      "description": "미드에서 신드라·애니비아·판테온을 주로 플레이하고, 친구와 함께하는 경기를 즐김",
+      "description": "서포터로 판테온·카르마·럭스를 주로 플레이하며 친구와 듀오를 즐김",
       "tags": [
-        "미드 플레이",
+        "서포터 플레이",
         "친구와 듀오"
       ]
     },
@@ -41,7 +41,7 @@ window.PORTFOLIO = {
     }
   ],
   "serviceLenses": [
-    {"game":"League of Legends","interest":"미드 플레이 · 친구와 듀오","observation":"혼자서는 솔로 랭크를 하지 않고, 친구와 함께 수준이 팽팽한 경기를 즐깁니다."},
+    {"game":"League of Legends","interest":"서포터 플레이 · 친구와 듀오","observation":"혼자서는 솔로 랭크를 하지 않고, 친구와 함께 수준이 팽팽한 경기를 즐깁니다."},
     {"game":"MapleStory","interest":"캐릭터 성장 · 일일 퀘스트 · 몬스터파크","observation":"챌린저스에서 시작해 스카니아로 옮긴 뒤에도 일일 성장 루틴을 이어갔습니다."},
     {"game":"FC Online","interest":"이벤트 보상 · 선수 구매 · 스쿼드 구성","observation":"보상과 선수단 구성에는 관심이 있지만 경기는 간헐적으로 플레이했습니다."}
   ],
