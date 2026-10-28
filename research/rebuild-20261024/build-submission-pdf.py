@@ -81,7 +81,7 @@ note('기존 자격자와 신규 자격자를 함께 세고, 진입 시점·남�
 #5
 new();title('B · 라이브서비스 PM','보상을 받았다고 경기를 한 것은 아닙니다')
 story.append(pic(Path('dist/reports/evidence/fc-event-opening-20261024.png'),95*mm));note('FC KICK-OFF 공식 화면 · 2026.10.24 열람. 기본 참여 2026.09.10~10.28, 연장 조건 충족 시 11.11까지.')
-add('확인된 구조와 원문 차이','h2');add('5일 접속 보상은 총 2,500FC이며 경기 미션과 별도입니다. 본문은 하루 1판 플레이를, 유의사항은 누적 출석을 설명합니다. 문구 차이는 확인했지만 실제 서버 규칙의 오류나 유저 오인 발생을 입증한 것은 아닙니다. 인정 경기 완료와 직접 조작 참여는 플랫폼·모드별로 나눠 해석하며, 해당 회차의 감독모드 인정은 미확인입니다. 인정 경기 완료와 직접 조작 참여는 플랫폼·모드별로 나눠 해석하며, 해당 회차의 감독모드 인정은 미확인입니다. 인정 경기 완료와 직접 조작 참여는 플랫폼·모드별로 나눠 해석하며, 해당 회차의 감독모드 인정은 미확인입니다.')
+add('확인된 구조와 원문 차이','h2');add('5일 접속 보상은 총 2,500FC이며 경기 미션과 별도입니다. 본문은 하루 1판 플레이를, 유의사항은 누적 출석을 설명합니다. 문구 차이는 확인했지만 실제 서버 규칙의 오류나 유저 오인 발생을 입증한 것은 아닙니다. 인정 경기 완료와 직접 조작 참여는 플랫폼·모드별로 나눠 해석하며, 해당 회차의 감독모드 인정은 미확인입니다.')
 add('접속 → 보상 수령 → 경기 또는 종료<br/>현재 선수단 → 인정 경기 완료 → 경기 보상 수령','h3')
 add('공통 안내부터 · 미실행 제안','h2');add('먼저 실제 인정 규칙을 확인해 공통 안내를 맞춥니다. 이해·탐색 문제가 확인될 때만 추가 안내를 시험합니다. 개인 상태를 보여주는 기능은 별도 확장안이며, 구현·로그·개발 공수 협의 전에는 실행을 전제하지 않습니다.')
 table(['판단할 지표','정의와 주의'],[['최소안 / 확장안','공통 안내는 조건 이해·문의 확인. 상태·로그 연동이 확보된 확장안만 배정 후 24시간 내 경기 완료 / 배정 계정 전체 측정'],['반복·D7','168시간 내 서로 다른 2일 이상 경기; D7 당일 접속·경기를 각각 확인'],['비용·안전','관련 문의·비정상 경기·계정당 실제 지급 FC/BP/팩과 개발·QA·CS 비용 확인']],[43*mm,131*mm])
@@ -124,7 +124,7 @@ for label,url in [
 add(link('A 전체 보고서','reports/genesis-pass.html')+' · '+link('B 전체 보고서','reports/fc-live-event.html')+' · '+link('C 전체 보고서','reports/idle-operations.html'),'small')
 gap(5);add('최영빈 · 게임 사업 PM / 라이브서비스 / 운영','h2');add('<link href="mailto:cyb050602@gmail.com" color="#315f73">cyb050602@gmail.com</link>');add(link('포트폴리오 웹사이트',web));note('경영학과 1학년 과정 이수 · 2학년 휴학 중. 게임 지표와 산업 구조를 공부하며 신입 직무를 준비하고 있습니다.');note('개인 경험은 본인 진술입니다. 공개자료 조사·분석 초안·문서 편집·웹 구현은 AI가 보조했습니다. 지원자의 모든 판단·설명이 검증 완료됐다는 의미가 아닙니다.')
 def footer(c,doc):
- c.setStrokeColor(line);c.line(18*mm,16*mm,192*mm,16*mm);c.setFont('MG',7);c.setFillColor(muted);c.drawString(18*mm,11*mm,'최영빈 · 게임 사업 / 라이브서비스 / 운영 | 공개자료·개인 경험·모의 제안');c.drawRightString(192*mm,11*mm,f'{doc.page}  /  2026.10.26')
+ c.setStrokeColor(line);c.line(18*mm,16*mm,192*mm,16*mm);c.setFont('MG',7);c.setFillColor(muted);c.drawString(18*mm,11*mm,'최영빈 · 게임 사업 / 라이브서비스 / 운영 | 공개자료·개인 경험·모의 제안');c.drawRightString(192*mm,11*mm,f'{doc.page}  /  편집 2026.10.28')
 doc=SimpleDocTemplate(str(out),pagesize=(210*mm,297*mm),leftMargin=18*mm,rightMargin=18*mm,topMargin=18*mm,bottomMargin=22*mm,title='최영빈 | 게임 사업·라이브서비스·운영 포트폴리오',author='최영빈')
 doc.build(story,onFirstPage=footer,onLaterPages=footer)
 shutil.copyfile(out,root/'dist/reports/youngbin-game-pm-portfolio.pdf')
