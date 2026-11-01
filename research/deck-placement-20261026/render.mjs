@@ -1,11 +1,11 @@
 import fs from 'node:fs/promises';
 import {PresentationFile,FileBlob} from 'file:///C:/Users/User/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@oai/artifact-tool/dist/artifact_tool.mjs';
-const source='C:/Users/User/Desktop/메이플키우기_게임분석서_시스템검증_제출본.pptx';
+const source=process.env.DECK_SOURCE||'C:/Users/User/Desktop/메이플키우기_게임분석서_최종수정본.pptx';
 const out='dist/reports/evidence/idle-growth-study';await fs.mkdir(out,{recursive:true});
 
 const p=await PresentationFile.importPptx(await FileBlob.load(source));
 // Keep the user's Desktop source unchanged; correct only published derivatives.
-const corrections=JSON.parse(await fs.readFile('research/final-audit-20261028/slide-corrections.json','utf8'));
+const corrections=source.includes('최종수정본')?[]:JSON.parse(await fs.readFile('research/final-audit-20261028/slide-corrections.json','utf8'));
 for(const correction of corrections){
  const inspection=await p.inspect({select:`$.slides[${correction.slide-1}].elements[*]`,include:['id','text']});
  const hit=inspection.records.find(row=>typeof row.text==='string'&&row.text.includes(correction.from));
