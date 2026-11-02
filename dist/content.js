@@ -137,17 +137,17 @@ window.PORTFOLIO = {
     {
       "name": "GODDESS OF VICTORY: NIKKE",
       "genre": "슈팅 RPG",
-      "duration": "약 3개월",
-      "note": "2026.09.30 플레이 종료",
-      "description": "진행 정체 구간에서 일일 반복이 강제 숙제처럼 느껴지고, 무료 지원 캐릭터를 활용해도 새롭게 즐길 콘텐츠를 찾지 못해 중단"
+      "duration": "약 3개월 경험 · 복귀 후 플레이 중",
+      "note": "2026.09.30 중단 → 2026.11.01 복귀",
+      "description": "진행 정체와 반복 플레이 부담으로 중단했다가, 기념 이벤트를 계기로 다시 시작"
     },
     {
       "name": "Brown Dust 2",
       "genre": "턴제 RPG",
-      "duration": "약 5주 · 플레이 중",
-      "durationEstimate": { "asOf": "2026-10-24", "weeks": 5, "ongoing": true },
-      "note": "시작 시점 추정 · 플레이 확인 2026.10.24",
-      "description": "지속적인 무료 모집과 여러 종류의 일일 콘텐츠를 통해 수집과 플레이를 이어가는 중"
+      "duration": "약 6주 · 플레이 종료 예정",
+      "durationEstimate": { "asOf": "2026-11-02", "weeks": 6, "ongoing": false },
+      "note": "2026.11.02 마지막 일일 과제 후 중단 예정",
+      "description": "무료 모집과 여러 일일 콘텐츠를 통해 수집과 플레이를 경험"
     }
   ],
   "pastMobileGames": [
