@@ -138,15 +138,14 @@ window.PORTFOLIO = {
       "name": "GODDESS OF VICTORY: NIKKE",
       "genre": "슈팅 RPG",
       "duration": "약 3개월 경험 · 복귀 후 플레이 중",
-      "note": "2026.09.30 중단 → 2026.11.01 복귀",
+      "note": "2026.11.01 복귀 · 현재 플레이 중",
       "description": "진행 정체와 반복 플레이 부담으로 중단했다가, 기념 이벤트를 계기로 다시 시작"
     },
     {
       "name": "Brown Dust 2",
       "genre": "턴제 RPG",
-      "duration": "약 6주 · 플레이 종료 예정",
+      "duration": "약 6주 · 플레이 종료",
       "durationEstimate": { "asOf": "2026-11-02", "weeks": 6, "ongoing": false },
-      "note": "2026.11.02 마지막 일일 과제 후 중단 예정",
       "description": "무료 모집과 여러 일일 콘텐츠를 통해 수집과 플레이를 경험"
     }
   ],
