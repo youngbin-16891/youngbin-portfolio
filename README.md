@@ -53,14 +53,14 @@ python -m http.server 8000 --directory dist
 
 ## GitHub Pages 배포
 
-Pages의 브랜치 배포는 `/dist`를 직접 선택할 수 없으므로 **dist 안의 네 파일을 배포용 저장소 루트에 업로드**하는 방법이 가장 간단합니다.
+고정 공개 주소는 https://youngbin-16891.github.io/youngbin-portfolio/ 입니다.
 
-1. GitHub에 배포용 저장소를 만들고 `dist` 안의 파일을 저장소 루트에 올립니다.
-2. Settings → Pages → Build and deployment에서 **Deploy from a branch**를 선택합니다.
-3. Branch는 **main**, 폴더는 **/(root)**를 선택하고 저장합니다.
-4. 배포 완료 후 표시되는 주소로 접속합니다. 파일 경로가 상대 경로이므로 프로젝트 하위 주소에서도 동작합니다.
+현재는 main에 push하면 GitHub Actions가 dist 폴더를 Pages 아티팩트로 올려 배포합니다. 실제 워크플로 파일명은 .github/workflows 아래에서 확인할 수 있습니다.
 
-현재 소스 폴더 구조를 유지하려면 GitHub Actions에서 `dist`를 Pages 아티팩트로 업로드하는 워크플로를 별도로 구성할 수 있습니다.
+1. dist의 정적 소스를 수정하고 화면·링크를 확인합니다.
+2. 기존 저장소의 main에 변경을 push합니다.
+3. Deploy portfolio to GitHub Pages 실행이 성공했는지 확인합니다.
+4. 위 고정 공개 주소에서 수정한 내용과 파일이 반영됐는지 확인합니다.
 
 ## 접근성·동작
 

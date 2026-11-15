@@ -15,7 +15,7 @@ const deliverables = [
 ];
 const projectNextSteps = [
   '가격·보상은 우선 유지 검토하고, 구매 주차별 해방 완료와 PLUS 전환을 확인합니다. 조건 오인이 확인될 때만 안내를 비교 시험합니다.',
-  '규칙을 일치시킨 뒤 첫 보상 수령자에게 경기 준비 안내를 시험합니다. 이벤트의 1억 퀵스쿼드는 해당 이용권 보유자에게만 안내하고, 첫 경기 완료와 반복 플레이를 구분합니다.',
+  '실제 인정 규칙과 안내를 먼저 일치시키고, 이해·탐색 문제가 확인되면 경기 준비 안내를 시험합니다. 이벤트의 1억 퀵스쿼드는 해당 이용권 보유자에게만 안내하고, 첫 경기 완료와 반복 플레이를 구분합니다.',
   '신청 전 계정 영향 FAQ와 거래별 처리 확인을 우선합니다. 미처리·중복·재문의와 활동 변화를 구분해 모니터링합니다.'
 ];
 
@@ -44,7 +44,7 @@ if (cards) {
  <p class="project-finding">${cardFindings[i]}</p>
  <dl class="project-output"><dt>실제 작성 문서</dt><dd>${d.output}</dd></dl>
  <div class="report-entry-links"><a class="button secondary" href="${d.href}">보고서 보기 ↗</a><a class="text-link" href="${d.href.replace('.html','-summary.html')}">1페이지 요약 ↗</a></div>
-${i===2?`<aside class="supplementary-work" aria-label="메이플 키우기 추가 게임 분석"><a class="supplementary-preview" href="reports/idle-growth-study.html"><img src="reports/evidence/idle-growth-study/slide-09.png?v=20261101" alt="성장 지원의 기존 조건과 모의 제안을 비교한 실제 슬라이드" loading="lazy" width="1280" height="720"></a><div><p class="supplementary-label">추가 결과물 · 게임 구조·성장 지원</p><a class="supplementary-title" href="reports/idle-growth-study.html">성장 지원 게임 분석 · 13p ↗</a><p>개인 재육성 경험과 공식 이벤트 조건을 비교하고, 참여 대상 변경안·화면 예시·검증 계획을 작성했습니다.</p></div></aside>`:''}
+${i===2?`<aside class="supplementary-work" aria-label="메이플 키우기 추가 게임 분석"><a class="supplementary-preview" href="reports/idle-growth-study.html"><img src="reports/evidence/idle-growth-study/slide-09.png?v=20261115" alt="성장 지원의 기존 조건과 모의 제안을 비교한 실제 슬라이드" loading="lazy" width="1280" height="720"></a><div><p class="supplementary-label">추가 결과물 · 게임 구조·성장 지원</p><a class="supplementary-title" href="reports/idle-growth-study.html">성장 지원 게임 분석 · 13p ↗</a><p>개인 재육성 경험과 공식 이벤트 조건을 비교하고, 참여 대상 변경안·화면 예시·검증 계획을 작성했습니다.</p></div></aside>`:''}
 
 
  </div></div></article>`).join('')+'</div>';
