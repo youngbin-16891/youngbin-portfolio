@@ -41,9 +41,9 @@ window.PORTFOLIO = {
     }
   ],
   "serviceLenses": [
-    {"game":"League of Legends","interest":"서포터 플레이 · 친구와 듀오","observation":"혼자서는 솔로 랭크를 하지 않고, 친구와 함께 수준이 팽팽한 경기를 즐깁니다."},
+    {"game":"League of Legends","interest":"서포터 플레이 · 친구와 듀오","observation":"솔로 랭크를 제외한 콘텐츠를 즐깁니다."},
     {"game":"MapleStory","interest":"캐릭터 성장 · 일일 퀘스트 · 몬스터파크","observation":"챌린저스에서 시작해 스카니아로 옮긴 뒤에도 일일 성장 루틴을 이어갔습니다."},
-    {"game":"FC Online","interest":"이벤트 보상 · 선수 구매 · 스쿼드 구성","observation":"보상과 선수단 구성에는 관심이 있지만 경기는 간헐적으로 플레이했습니다."}
+    {"game":"승리의 여신: 니케","interest":"일일 과제","observation":"복귀 후 매일 일일 과제를 진행하고 있습니다."}
   ],
   "experiencedGames": [
     {
