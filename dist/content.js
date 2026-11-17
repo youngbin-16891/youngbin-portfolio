@@ -116,6 +116,7 @@ window.PORTFOLIO = {
     },
     {
       "name": "FC Online",
+      "featured": true,
       "genre": "Sports / Football",
       "duration": "간헐적으로 장기간 이용",
       "description": "경기 빈도는 높지 않았지만, 이벤트 참여 → 보상 획득 → 재화 축적 → 선수 구매 → 스쿼드 구성으로 다시 접속한 경험"
@@ -133,13 +134,6 @@ window.PORTFOLIO = {
       "genre": "수집형 RPG / 건설",
       "duration": "결제 기록 기준 최소 1년 4개월",
       "featured": true
-    },
-    {
-      "name": "GODDESS OF VICTORY: NIKKE",
-      "genre": "슈팅 RPG",
-      "duration": "약 3개월 경험 · 복귀 후 플레이 중",
-      "note": "2026.11.01 복귀 · 현재 플레이 중",
-      "description": "진행 정체와 반복 플레이 부담으로 중단했다가, 기념 이벤트를 계기로 다시 시작"
     },
     {
       "name": "Brown Dust 2",
