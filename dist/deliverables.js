@@ -1,6 +1,6 @@
 // Separate observed facts, personal experience and proposed validation.
-// User-fixed project roster: A MapleStory BM / B FC Online live service /
-// C Maple Idle operations. Experience data must never add or replace projects.
+// Featured projects are operations first and MapleStory BM second.
+// Archived reports remain available at their original URLs.
 const deliverables = [
   {role:'A · 사업 PM',game:'메이플스토리',title:'제네시스 패스의 구매 가치와 BM 분석',status:'공개자료 기반 BM 분석',href:'reports/genesis-pass.html',
    takeaways:[['핵심 문제','누구에게 해방 가속이 구매 가치가 되고, 어떤 조건에서는 구매 장벽이 되는가?'],['확인한 사실','기본 패스는 30,000 넥슨 캐시·흔적 3배. PLUS 유료 보상은 별도 가격과 보스 조건이 있습니다.'],['해석','기본 구매와 후속 구매는 다른 판단입니다. 보상 활용 가능성과 완료를 먼저 확인하도록 제안했습니다.']],
@@ -37,7 +37,7 @@ deliverables[2].output='사건 타임라인 · VOC 분류표 · 모의 공지·F
 const cardFindings=["플레이를 유지한 PLUS 미구매 사례를 바탕으로, 할인보다 보스 수행·추가 시간 부담을 먼저 확인할 이유를 분석했습니다.","보상 수령과 인정 경기 완료를 구분하고, 모드별 참여를 나눠 안내 효과를 확인하는 모의안입니다.","계정 제한에 따른 미접속은 자발적 이탈과 다릅니다. 이를 구분한 이용자 안내·FAQ·CS 모의안을 작성했습니다."];
 const cards = document.querySelector('#case-studies');
 if (cards) {
-  cards.innerHTML = '<div class="deliverable-grid">'+deliverables.map((d,i)=>`
+  cards.innerHTML = '<div class="deliverable-grid">'+[2,0].map((i)=>{const d=deliverables[i];return`
  <article class="deliverable-card review-card" aria-labelledby="project-title-${i+1}">
  <div class="review-card-layout"><figure class="project-preview"><a href="${d.href}" aria-label="${d.game} 상세 보고서"><img${i===2?' class="output-preview"':''} src="${previews[i].src}" alt="${previews[i].alt}" loading="lazy"></a><figcaption>${previews[i].caption}</figcaption></figure>
  <div class="review-card-copy"><div class="deliverable-role">${d.role}<span>${d.status}</span></div><p class="eyebrow">${d.game}</p><h3 id="project-title-${i+1}">${d.title}</h3>
@@ -47,6 +47,6 @@ if (cards) {
 ${i===2?`<aside class="supplementary-work" aria-label="메이플 키우기 추가 게임 분석"><a class="supplementary-preview" href="reports/idle-growth-study.html"><img src="reports/evidence/idle-growth-study/slide-09.png?v=20261115" alt="성장 지원의 기존 조건과 모의 제안을 비교한 실제 슬라이드" loading="lazy" width="1280" height="720"></a><div><p class="supplementary-label">추가 결과물 · 게임 구조·성장 지원</p><a class="supplementary-title" href="reports/idle-growth-study.html">성장 지원 게임 분석 · 13p ↗</a><p>개인 재육성 경험과 공식 이벤트 조건을 비교하고, 참여 대상 변경안·화면 예시·검증 계획을 작성했습니다.</p></div></aside>`:''}
 
 
- </div></div></article>`).join('')+'</div>';
+ </div></div></article>`;}).join('')+'</div>';
 
 }
