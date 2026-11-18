@@ -5,11 +5,6 @@ window.PORTFOLIO = {
       "label": "이메일",
       "text": "cyb050602@gmail.com",
       "url": "mailto:cyb050602@gmail.com"
-    },
-    {
-      "label": "GitHub",
-      "text": "포트폴리오 제작 자료",
-      "url": "https://github.com/youngbin-16891/youngbin-portfolio"
     }
   ],
   "coreGames": [
@@ -19,7 +14,7 @@ window.PORTFOLIO = {
       "metric": "5,726",
       "unit": "HOURS",
       "period": "시즌 3부터 장기간 플레이",
-      "detail": "직접 플레이한 2개 계정의 화면 표시 시간 합산 · 플레이 주체는 본인 진술",
+      "detail": "직접 플레이한 2개 계정의 화면 표시 시간 합산",
       "description": "서포터로 판테온·카르마·럭스를 주로 플레이하며 친구와 듀오를 즐김",
       "tags": [
         "서포터 플레이",
@@ -31,7 +26,7 @@ window.PORTFOLIO = {
       "genre": "MMORPG",
       "metric": "288",
       "unit": "LEVEL",
-      "period": "중학생 시절부터 장기간 플레이",
+      "period": "네 살 무렵 형을 통해 처음 접함 · 간헐적으로 플레이하다 체인지 버닝: 루시드부터 본격 복귀",
       "detail": "챌린저스 월드에서 새로 시작해 스카니아로 리프한 뒤 Lv.288까지 육성",
       "description": "성장, 이벤트, 경제, 보상 구조 및 장기 라이브서비스 변화 경험",
       "tags": [
@@ -126,7 +121,7 @@ window.PORTFOLIO = {
     {
       "name": "Seven Knights Re:BIRTH",
       "genre": "수집형 RPG",
-      "duration": "약 7개월",
+      "duration": "출시일부터 플레이 · 연희 등장 후 약 1~2개월 더 이용",
       "featured": true
     },
     {

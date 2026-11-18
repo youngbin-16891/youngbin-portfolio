@@ -20,7 +20,7 @@ const projectNextSteps = [
 ];
 
 const previews=[
- {src:'assets/maplestory/genesis-pass-user-guide.png',alt:'제네시스 패스 실제 상품 안내',caption:'지원자 제공 상품 이미지'},
+ {src:'assets/maplestory/genesis-pass-user-guide.png',alt:'제네시스 패스 실제 상품 안내',caption:''},
  {src:'reports/evidence/fc-event-opening-20261024.png',alt:'공식 FC KICK-OFF 신규·복귀 이벤트 화면',caption:'공식 이벤트 화면 · 2026.10.24 열람'},
  {src:'reports/evidence/idle-account-state-preview.png?v=20261028final',alt:'계정 제한 상태와 접속 가능 상태를 구분한 모의 측정안',caption:'작성 결과물 · 계정 상태별 해석 · 모의 측정안'}
 ];
@@ -39,7 +39,7 @@ const cards = document.querySelector('#case-studies');
 if (cards) {
   cards.innerHTML = '<div class="deliverable-grid">'+[2,0].map((i)=>{const d=deliverables[i];return`
  <article class="deliverable-card review-card" aria-labelledby="project-title-${i+1}">
- <div class="review-card-layout"><figure class="project-preview"><a href="${d.href}" aria-label="${d.game} 상세 보고서"><img${i===2?' class="output-preview"':''} src="${previews[i].src}" alt="${previews[i].alt}" loading="lazy"></a><figcaption>${previews[i].caption}</figcaption></figure>
+ <div class="review-card-layout"><figure class="project-preview"><a href="${d.href}" aria-label="${d.game} 상세 보고서"><img${i===2?' class="output-preview"':''} src="${previews[i].src}" alt="${previews[i].alt}" loading="lazy"></a>${previews[i].caption ? '<figcaption>'+previews[i].caption+'</figcaption>' : ''}</figure>
  <div class="review-card-copy"><div class="deliverable-role">${d.role}<span>${d.status}</span></div><p class="eyebrow">${d.game}</p><h3 id="project-title-${i+1}">${d.title}</h3>
  <p class="project-finding">${cardFindings[i]}</p>
  <dl class="project-output"><dt>실제 작성 문서</dt><dd>${d.output}</dd></dl>
