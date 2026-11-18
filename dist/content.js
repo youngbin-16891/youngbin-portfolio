@@ -121,7 +121,7 @@ window.PORTFOLIO = {
     {
       "name": "Seven Knights Re:BIRTH",
       "genre": "수집형 RPG",
-      "duration": "약 3개월",
+      "duration": "약 4개월",
       "featured": true
     },
     {
