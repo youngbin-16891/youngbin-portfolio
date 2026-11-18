@@ -121,7 +121,7 @@ window.PORTFOLIO = {
     {
       "name": "Seven Knights Re:BIRTH",
       "genre": "수집형 RPG",
-      "duration": "출시일부터 플레이 · 연희 등장 후 약 1~2개월 더 이용",
+      "duration": "약 3개월",
       "featured": true
     },
     {
