@@ -38,4 +38,16 @@ require(not (root/'interview').exists() and not (root/'research').exists(),'Inte
 require((dist/'research/rebuild-20261024/voc-cases.csv').exists(),'Missing VOC CSV')
 require((dist/'research/rebuild-20261024/voc-type-counts.csv').exists(),'Missing counts CSV')
 require((dist/'research/rebuild-20261024/voc-collection-method.md').exists(),'Missing VOC method')
+
+import json
+model=json.loads((dist/'content.js').read_text(encoding='utf-8').split('window.PORTFOLIO =',1)[1].strip().rstrip(';'))
+memos=model['serviceLenses']
+texts=[m['observation'] for m in memos]
+require(len(texts)==len(set(texts)), 'Duplicate personal play memo wording')
+nikke=next(m for m in memos if m['game']=='승리의 여신: 니케')
+require(nikke['interest']=='이벤트 · 일일 과제','Preserve NIKKE interests')
+require(nikke['observation']=='특정 캐릭터를 확보하고 육성하는 것을 목표로 플레이하고 있습니다.','NIKKE goal wording mismatch')
+maple=next(m for m in memos if m['game']=='MapleStory')
+require(maple['observation']=='이벤트 참여와 일일 과제를 매일 하고 있습니다.','Preserve Maple play memo')
+require(nikke['observation'] in (dist/'index.html').read_text(encoding='utf-8'),'Static NIKKE memo out of sync')
 print('Portfolio feedback regression checks passed')

@@ -38,7 +38,7 @@ window.PORTFOLIO = {
   "serviceLenses": [
     {"game":"League of Legends","interest":"서포터 플레이 · 친구와 듀오","observation":"친구들과 다양한 모드를 함께 플레이하고 있습니다."},
     {"game":"MapleStory","interest":"캐릭터 성장 · 일일 퀘스트 · 몬스터파크","observation":"이벤트 참여와 일일 과제를 매일 하고 있습니다."},
-    {"game":"승리의 여신: 니케","interest":"이벤트 · 일일 과제","observation":"이벤트 참여와 일일 과제를 매일 하고 있습니다."}
+    {"game":"승리의 여신: 니케","interest":"이벤트 · 일일 과제","observation":"특정 캐릭터를 확보하고 육성하는 것을 목표로 플레이하고 있습니다."}
   ],
   "experiencedGames": [
     {
