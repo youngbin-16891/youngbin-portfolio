@@ -36,9 +36,9 @@ window.PORTFOLIO = {
     }
   ],
   "serviceLenses": [
-    {"game":"League of Legends","interest":"서포터 플레이 · 친구와 듀오","observation":"솔로 랭크를 제외한 콘텐츠를 즐깁니다."},
-    {"game":"MapleStory","interest":"캐릭터 성장 · 일일 퀘스트 · 몬스터파크","observation":"챌린저스에서 시작해 스카니아로 옮긴 뒤에도 일일 성장 루틴을 이어갔습니다."},
-    {"game":"승리의 여신: 니케","interest":"일일 과제","observation":"복귀 후 매일 일일 과제를 진행하고 있습니다."}
+    {"game":"League of Legends","interest":"서포터 플레이 · 친구와 듀오","observation":"친구들과 다양한 모드를 함께 플레이하고 있습니다."},
+    {"game":"MapleStory","interest":"캐릭터 성장 · 일일 퀘스트 · 몬스터파크","observation":"이벤트 참여와 일일 과제를 매일 하고 있습니다."},
+    {"game":"승리의 여신: 니케","interest":"이벤트 · 일일 과제","observation":"이벤트 참여와 일일 과제를 매일 하고 있습니다."}
   ],
   "experiencedGames": [
     {
